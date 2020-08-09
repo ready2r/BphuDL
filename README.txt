@@ -26,21 +26,17 @@ Most of the others you can just paste the browser URL. Xhamster is currently not
 =================
 AfreecaTV Login
 =================
-AfreecaTV requires your login info to access most of the clips/videos.  This is a basic command line code and does not send your 
-information anywhere besides to Afreecatv, nor does it store it on your PC.  If you are worried about it.. have someone who knows 
-basic code go over the batch file.
+AfreecaTV requires your login info to access most of the clips/videos.  This is a basic command line code and does not send your information anywhere besides to Afreecatv, nor does it store it on your PC.  If you are worried about it.. have someone who knows basic code go over the batch file.
 
 =================
 Twitch Streams
 =================
-If you are saving a stream as it is live, pay attention to disk space.  Live streams will take up a large filesizes if you just let
-it run without paying attention.  A 16 hour Jinny stream can easily take over 10GB and its only 720p.  Just a heads up.
+If you are saving a stream as it is live, pay attention to disk space.  Live streams will take up a large filesizes if you just let it run without paying attention.  A 16 hour Jinny stream can easily take over 10GB and its only 720p.  Just a heads up.
 
 =================
 Other
 =================
-You can use this for whatever.  If you want to keep videos seperate from the other categories, you can use this option.  It will save
-the videos in the "BphuDL\Downloads\Other\" folder.
+You can use this for whatever.  If you want to keep videos seperate from the other categories, you can use this option.  It will save the videos in the "BphuDL\Downloads\Other\" folder.
 
 ==========================
 AudioOnlyDownloadList.txt
@@ -52,12 +48,9 @@ download all the songs in the txt file
 ==========================
 Menu Customization
 ==========================
-The menus are easily customizable.  Its benefical to add commonly downloaded streamers or porn sites to the list.  This will put 
-their videos in their own folder together. The easiest way to edit the extra menus is by using "Find and Replace" in notepad. 
-CTRL+H will bring it up. An example would be changing TWITUSER-TWO to someone else.  Put TWITUSER-TWO into the "Find what" field and the
-user who you want to add in the "Replace with" field.  Check "Match case" and click Replace All.  This will make it so using that user 
-option when running the batch file will put the new downloaded videos in the user's own folder.  Like with most things, DO NOT USE SPACES, 
-use underscores instead.
+The menus are easily customizable.  Its benefical to add commonly downloaded streamers or porn sites to the list.  This will put their videos in their own folder together. The easiest way to edit the extra menus is by using "Find and Replace" in notepad. 
+CTRL+H will bring it up. An example would be changing TWITUSER-TWO to someone else.  Put TWITUSER-TWO into the "Find what" field and the user who you want to add in the "Replace with" field.  Check "Match case" and click Replace All.  This will make it so using that user 
+option when running the batch file will put the new downloaded videos in the user's own folder.  Like with most things, DO NOT USE SPACES, use underscores instead.
 
 Thats about it.  Like I said, if you have any more questions.. just msg me on Discord: Bphu#0001
 
