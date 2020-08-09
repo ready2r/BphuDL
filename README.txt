@@ -7,24 +7,15 @@ PREFIX
 =================
 https://github.com/ytdl-org/youtube-dl/
 Do not move any of the .exe files or the batch file from the location they are in.
-This batch file uses youtube-dl and ffmpeg to do the downloading.  If you are trying to download a video from an obscure source and it doesn't work, 
-its not the batch file's fault, It's a youtube-dl issue.  A ton of people work hard on youtube-dl, so most sites should work.  I will warn 
-you, there are new hosting sites coming out that this will not work on.  The way the new sites are sending the data to the end user makes
-it hard for youtube-dl to download it.(im not an expert but i think i read that it has to do with the data expiring extremely fast) 
-An example site would be Sproutvideo.  There are other programs you can use to download from these new sites.
+This batch file uses youtube-dl and ffmpeg to do the downloading.  If you are trying to download a video from an obscure source and it doesn't work, its not the batch file's fault, It's a youtube-dl issue.  A ton of people work hard on youtube-dl, so most sites should work.  I will warn you, there are new hosting sites coming out that this will not work on.  The way the new sites are sending the data to the end user makes it hard for youtube-dl to download it.(im not an expert but i think i read that it has to do with the data expiring extremely fast). An example site would be Sproutvideo.  There are other programs you can use to download from these new sites.
 
-If a video download is not working, your best bet is to check: https://github.com/ytdl-org/youtube-dl/issues and see if there is an issue that
-has been reported.  Example at the time of writing this: Xhamster isnt working by just pasting the URL into the batch file.  You will need to Inspect elements > click Network Tab and make sure Media is selected on the right side.  Right click the video you want and Copy the url.
-At this point, the batch file is useless because you can just paste the link into your browser and save it that way.
+If a video download is not working, your best bet is to check: https://github.com/ytdl-org/youtube-dl/issues and see if there is an issue that has been reported.  Example at the time of writing this: Xhamster isnt working by just pasting the URL into the batch file.  You will need to Inspect elements > click Network Tab and make sure Media is selected on the right side.  Right click the video you want and Copy the url. At this point, the batch file is useless because you can just paste the link into your browser and save it that way.
 
 =================
 Pornhub Premium
 =================
 Pornhub Premium requires authentication to download videos using youtube-dl.
-If you have Pornhub Premium, you can download the videos by setting up a cookies.txt file in the home folder [same folder as the batch file]
-In order to get the cookie data from your Pornhub Premium site, you have a few options.. but the easiest would be to use a browser addon
-called Cookies.txt (they have it for Chrome and Firefox).  Once the addon is installed.. Log into Pornhub Premium and then use the addon 
-button to download the cookies.txt file and save it to the home folder mentioned earlier. [same folder as the batch file]
+If you have Pornhub Premium, you can download the videos by setting up a cookies.txt file in the home folder [same folder as the batch file] In order to get the cookie data from your Pornhub Premium site, you have a few options.. but the easiest would be to use a browser addon called Cookies.txt (they have it for Chrome and Firefox).  Once the addon is installed.. Log into Pornhub Premium and then use the addon button to download the cookies.txt file and save it to the home folder mentioned earlier. [same folder as the batch file]
 
 =================
 Other Porn Sites
