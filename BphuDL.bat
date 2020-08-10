@@ -9,8 +9,8 @@
 :: 6REDDIT - Reddit
 :: 7OTHER - Other
 
-:begin
 :home1
+:begin
 cls
 echo :::::::::  :::::::::  :::    ::: :::    ::: :::::::::  :::        
 echo :+:    :+: :+:    :+: :+:    :+: :+:    :+: :+:    :+: :+:        
