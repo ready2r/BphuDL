@@ -19,11 +19,11 @@ echo +#++:++#+  +#++:++#+  +#++:++#++ +#+    +:+ +#+    +:+ +#+
 echo +#+    +#+ +#+        +#+    +#+ +#+    +#+ +#+    +#+ +#+        
 echo #+#    #+# #+#        #+#    #+# #+#    #+# #+#    #+# #+#        
 echo #########  ###        ###    ###  ########  #########  ##########
-echo ======================== Version 1.0 =============================
+echo ======================== Version 1.0 ==============================
 echo This batch file uses youtube-dl and ffmpeg to download videos from 
 echo the platforms below. Please read the README.txt if you have any 
 echo questions!
-echo ==================================================================
+echo ===================================================================
 
 echo ===================
 echo  Platform:
