@@ -1070,7 +1070,7 @@ echo ===========
 set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl -F %url% &
-set "hls=%~1"
+set "fc=%~1"
 set "spc=%~1"
 echo =======================================================
 echo  Pick Format Code from the left column [example: 1080]
