@@ -94,8 +94,6 @@ if "%twr%"=="5" goto twr5
 if "%twr%"=="6" goto twr6
 if "%twr%"=="Q" goto home1
 if "%twr%"=="q" goto home1
-echo Please Pick an option:
-goto begin
 
 ::  Download Video
 :twr1
@@ -120,8 +118,9 @@ if /I "%tdv1%" EQU "N" goto :tdv1n
 goto :choice
 :tdv1y
 start Downloads\Twitter\
+goto home1
 :tdv1n
-exit
+goto home1
 
 ::  TWITUSER-TWO
 :twr2
@@ -146,8 +145,9 @@ if /I "%twu1%" EQU "N" goto :twu1n
 goto :choice
 :twu1y
 start Downloads\Twitter\Users\TWITUSER-TWO\
+goto home1
 :twu1n
-exit
+goto home1
 
 ::  TWITUSER-THREE
 :twr3
@@ -172,8 +172,9 @@ if /I "%twu2%" EQU "N" goto :twu2n
 goto :choice
 :twu2y
 start Downloads\Twitter\Users\TWITUSER-THREE\
+goto home1
 :twu2n
-exit
+goto home1
 
 ::  TWITUSER-FOUR
 :twr4
@@ -198,8 +199,9 @@ if /I "%twu3%" EQU "N" goto :twu3n
 goto :choice
 :twu3y
 start Downloads\Twitter\Users\TWITUSER-FOUR\
+goto home1
 :twu3n
-exit
+goto home1
 
 ::  TWITUSER-FIVE
 :twr5
@@ -224,8 +226,9 @@ if /I "%twu4%" EQU "N" goto :twu4n
 goto :choice
 :twu4y
 start Downloads\Twitter\Users\TWITUSER-FIVE\
+goto home1
 :twu4n
-exit
+goto home1
 
 ::  TWITUSER-SIX
 :twr6
@@ -250,8 +253,9 @@ if /I "%twu5%" EQU "N" goto :twu5n
 goto :choice
 :twu5y
 start Downloads\Twitter\Users\TWITUSER-SIX\
+goto home1
 :twu5n
-exit
+goto home1
 
 :exit
 @exit
@@ -267,7 +271,6 @@ echo +#++:++#++: :#::+::#   +#++:++#:  +#++:++#   +#++:++#  +#+        +#++:++#+
 echo +#+     +#+ +#+        +#+    +#+ +#+        +#+       +#+        +#+     +#+ +#+      +#+   +#+  
 echo #+#     #+# #+#        #+#    #+# #+#        #+#       #+#    #+# #+#     #+# #+#       #+#+#+#   
 echo ###     ### ###        ###    ### ########## ########## ########  ###     ### ###         ###     
-
 echo ============================================
 echo  Streamer List:
 echo ============================================
@@ -296,8 +299,6 @@ if "%op%"=="5" goto op5
 if "%op%"=="6" goto op6
 if "%op%"=="Q" goto home1
 if "%op%"=="q" goto home1
-echo Please Pick an option:
-goto begin
 
 ::  Download Video
 :op1
@@ -328,8 +329,9 @@ if /I "%adv1%" EQU "N" goto :adv1n
 goto :choice
 :adv1y
 start Downloads\AfreecaTV\
+goto home1
 :adv1n
-exit
+goto home1
 
 ::  ATVUSER-TWO
 :op2
@@ -360,8 +362,9 @@ if /I "%atv2%" EQU "N" goto :atv2n
 goto :choice
 :atv2y
 start Downloads\AfreecaTV\Users\ATVUSER-TWO\
+goto home1
 :atv2n
-exit
+goto home1
 
 ::  ATVUSER-THREE
 :op3
@@ -392,8 +395,9 @@ if /I "%atv3%" EQU "N" goto :atv3n
 goto :choice
 :atv3y
 start Downloads\AfreecaTV\Users\ATVUSER-THREE\
+goto home1
 :atv3n
-exit
+goto home1
 
 ::  ATVUSER-FOUR
 :op4
@@ -424,8 +428,9 @@ if /I "%atv4%" EQU "N" goto :atv4n
 goto :choice
 :atv4y
 start Downloads\AfreecaTV\Users\ATVUSER-FOUR\
+goto home1
 :atv4n
-exit
+goto home1
 
 ::  ATVUSER-
 :op5
@@ -456,8 +461,9 @@ if /I "%atv5%" EQU "N" goto :atv5n
 goto :choice
 :atv5y
 start Downloads\AfreecaTV\Users\ATVUSER-FIVE\
+goto home1
 :atv5n
-exit
+goto home1
 
 ::  ATVUSER-SIX
 :op6
@@ -488,8 +494,9 @@ if /I "%atv6%" EQU "N" goto :atv6n
 goto :choice
 :atv6y
 start Downloads\AfreecaTV\Users\ATVUSER-SIX\
+goto home1
 :atv6n
-exit
+goto home1
 
 :exit
 @exit
@@ -505,7 +512,6 @@ echo   +#++:   +#+    +:+ +#+    +:+     +#+     +#+    +:+ +#++:++#+  +#++:++#
 echo    +#+    +#+    +#+ +#+    +#+     +#+     +#+    +#+ +#+    +#+ +#+        
 echo    #+#    #+#    #+# #+#    #+#     #+#     #+#    #+# #+#    #+# #+#        
 echo    ###     ########   ########      ###      ########  #########  ########## 
-
 echo ====================================================================================================================
 echo  Youtube Video Type:
 echo ====================================================================================================================
@@ -538,8 +544,6 @@ if "%yt%"=="10" goto yt10
 if "%yt%"=="11" goto yt11
 if "%yt%"=="Q" goto home1
 if "%yt%"=="q" goto home1
-echo Please Pick an option:
-goto begin
 
 ::  Video - Best Quality
 :yt1
@@ -560,8 +564,9 @@ if /I "%vbq%" EQU "N" goto :vbqn
 goto :choice
 :vbqy
 start Downloads\YT\Best\
+goto home1
 :vbqn
-exit
+goto home1
 
 ::  Video - Best Combined Quality
 :yt2
@@ -582,8 +587,9 @@ if /I "%vbcq%" EQU "N" goto :vbcqn
 goto :choice
 :vbcqy
 start Downloads\YT\
+goto home1
 :vbcqn
-exit
+goto home1
 
 ::  Music - Video Best Quality
 :yt3
@@ -604,8 +610,9 @@ if /I "%mvbq%" EQU "N" goto :mvbqn
 goto :choice
 :mvbqy
 start Downloads\YTMusic\MusicVideos\Best\
+goto home1
 :mvbqn
-exit
+goto home1
 
 ::  Music - Video Best Combined Quality
 :yt4
@@ -626,8 +633,9 @@ if /I "%mvbcq%" EQU "N" goto :mvbcqn
 goto :choice
 :mvbcqy
 start Downloads\YTMusic\MusicVideos\
+goto home1
 :mvbcqn
-exit
+goto home1
 
 ::  Music - Audio Only 
 :yt5
@@ -648,8 +656,9 @@ if /I "%mao%" EQU "N" goto :maon
 goto :choice
 :maoy
 start Downloads\YTMusic\AudioOnly\
+goto home1
 :maon
-exit
+goto home1
 
 ::  Music - Audio Only from TXT File
 :yt6
@@ -668,8 +677,9 @@ if /I "%maot%" EQU "N" goto :maotn
 goto :choice
 :maoty
 start Downloads\YTMusic\AudioOnly\
+goto home1
 :maotn
-exit
+goto home1
 
 ::  Playlist - Video Best Quality
 :yt7
@@ -693,8 +703,9 @@ if /I "%pvbq%" EQU "N" goto :pvbqn
 goto :choice
 :pvbqy
 start Downloads\YT\Playlist\Best\%fldr%\
+goto home1
 :pvbqn
-exit
+goto home1
 
 ::  Playlist - Video Best Combined Quality
 :yt8
@@ -718,8 +729,9 @@ if /I "%pvbcq%" EQU "N" goto :pvbcqn
 goto :choice
 :pvbcqy
 start Downloads\YT\Playlist\%fldr%\
+goto home1
 :pvbcqn
-exit
+goto home1
 
 ::  Playlist - Music Video Best Quality
 :yt9
@@ -743,8 +755,9 @@ if /I "%pmvbq%" EQU "N" goto :pmvbqn
 goto :choice
 :pmvbqy
 start Downloads\YTMusic\MusicVideos\Playlist\Best\%fldr%\
+goto home1
 :pmvbqn
-exit
+goto home1
 
 ::  Playlist - Music Video Best Combined Quality
 :yt10
@@ -768,8 +781,9 @@ if /I "%pmvbcq%" EQU "N" goto :pmvbcqn
 goto :choice
 :pmvbcqy
 start Downloads\YTMusic\MusicVideos\Playlist\%fldr%\
+goto home1
 :pmvbcqn
-exit
+goto home1
 
 ::  Playlist - Audio Only
 :yt11
@@ -793,8 +807,9 @@ if /I "%pao%" EQU "N" goto :paon
 goto :choice
 :paoy
 start Downloads\YTMusic\AudioOnly\Playlist\%fldr%\
+goto home1
 :paon
-exit
+goto home1
 
 :exit
 @exit
@@ -810,7 +825,6 @@ echo +#++:++#+  +#+    +:+ +#++:++#:  +#+ +:+ +#+
 echo +#+        +#+    +#+ +#+    +#+ +#+  +#+#+# 
 echo #+#        #+#    #+# #+#    #+# #+#   #+#+# 
 echo ###         ########  ###    ### ###    #### 
-
 echo ===========================================
 echo  Porn Site List:
 echo ===========================================
@@ -840,6 +854,7 @@ if "%prn%"=="6" goto prn6
 if "%prn%"=="Q" goto home1
 if "%prn%"=="q" goto home1
 
+
 ::  Download Video
 :prn1
 cls
@@ -865,8 +880,9 @@ if /I "%pdv1%" EQU "N" goto :pdv1n
 goto :choice
 :pdv1y
 start Downloads\Porn\
+goto home1
 :pdv1n
-exit
+goto home1
 
 ::  Pornhub
 :prn2
@@ -893,8 +909,9 @@ if /I "%ph1%" EQU "N" goto :ph1n
 goto :choice
 :ph1y
 start Downloads\Porn\Pornhub\
+goto home1
 :ph1n
-exit
+goto home1
 
 ::  Pornhub Premium
 :prn3
@@ -922,8 +939,9 @@ if /I "%php1%" EQU "N" goto :php1n
 goto :choice
 :php1y
 start Downloads\Porn\Pornhub\
+goto home1
 :php1n
-exit
+goto home1
 
 ::  Xvideo
 :prn4
@@ -949,9 +967,10 @@ if /I "%xv1%" EQU "Y" goto :xv1y
 if /I "%xv1%" EQU "N" goto :xv1n
 goto :choice
 :xv1y
-start Downloads\Porn\Xvideo
+start Downloads\Porn\Xvideo\
+goto home1
 :xv1n
-exit
+goto home1
 
 ::  PORNSITE-FOUR
 :prn5
@@ -978,8 +997,9 @@ if /I "%ps4%" EQU "N" goto :ps4n
 goto :choice
 :ps4y
 start Downloads\Porn\PORNSITE-FOUR\
+goto home1
 :ps4n
-exit
+goto home1
 
 ::  PORNSITE-FIVE
 :prn6
@@ -1006,8 +1026,9 @@ if /I "%ps5%" EQU "N" goto :ps5n
 goto :choice
 :ps5y
 start Downloads\Porn\PORNSITE-FIVE\
+goto home1
 :ps5n
-exit
+goto home1
 
 :exit
 @exit
@@ -1065,8 +1086,9 @@ if /I "%tc1%" EQU "N" goto :tc1n
 goto :choice
 :tc1y
 start Downloads\Twitch\Clips\
+goto home1
 :tc1n
-exit
+goto home1
 
 ::  Live Stream Save
 :tlv2
@@ -1124,11 +1146,13 @@ if /I "%red1%" EQU "N" goto :red1n
 goto :choice
 :red1y
 start Downloads\Reddit\
+goto home1
 :red1n
-exit
+goto home1
 
 ::  7OTHER
 :pla7
+
 cls
 echo  :::::::: ::::::::::: :::    ::: :::::::::: :::::::::  
 echo :+:    :+:    :+:     :+:    :+: :+:        :+:    :+: 
@@ -1137,6 +1161,7 @@ echo +#+    +:+    +#+     +#++:++#++ +#++:++#   +#++:++#:
 echo +#+    +#+    +#+     +#+    +#+ +#+        +#+    +#+ 
 echo #+#    #+#    #+#     #+#    #+# #+#        #+#    #+# 
 echo  ########     ###     ###    ### ########## ###    ### 
+
 echo =========================================================================
 echo  Other -  Use this for any random site not related to the other options.
 echo                             Save Location:
@@ -1159,8 +1184,9 @@ if /I "%oth1%" EQU "N" goto :oth1n
 goto :choice
 :oth1y
 start Downloads\Other\
+goto home1
 :oth1n
-exit
+goto home1
 
 :exit
 @exit
