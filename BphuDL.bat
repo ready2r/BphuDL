@@ -1070,14 +1070,14 @@ echo ===========
 set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl -F %url% &
-set "fc=%~1"
+set "hls=%~1"
 set "spc=%~1"
 echo =======================================================
 echo  Pick Format Code from the left column [example: 1080]
 echo =======================================================
-if not defined fc set /p "fc=Type the Format Code from the left column for the Quality that you want: "
+if not defined hls set /p "hls=Type the Format Code from the left column for the Quality that you want: "
 if not defined spc set /p "spc=Special Tag? [Funny/Tits/Ass/whatever]: "
-youtube-dl -f "%fc%" -o Downloads\Twitch\Clips\[%%(creator)s-%spc%]-%%(title)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+youtube-dl -f "%hls%" -o Downloads\Twitch\Clips\[%%(creator)s-%spc%]-%%(title)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
 :choice
 set /P tc1=Open Download Folder [Y/N]?
