@@ -1,13 +1,15 @@
 @echo off
 
 :: TO FIND THE START OF EACH SECTION - PRESS CTRL+F AND SEARCH FOR:
-:: 1TWITTER - Twitter
-:: 2AFREECATV - Afreecatv
-:: 3YOUTUBE - Youtube
-:: 4PORN - Porn
-:: 5TWITCH - Twitch
-:: 6REDDIT - Reddit
-:: 7OTHER - Other
+:: skip1 - Twitter
+:: skip2 - Afreecatv
+:: skip3 - Youtube
+:: skip4 - Porn
+:: skip5 - Twitch
+:: skip6 - Reddit
+:: skip7 - Other
+:: skip8 - Youtube-dl Flags
+:: skip9 - Directories
 
 :home1
 :begin
@@ -36,6 +38,8 @@ echo  4) Porn
 echo  5) Twitch
 echo  6) Reddit
 echo  7) Other
+echo  8) Youtube-dl Flags
+echo  9) Directories
 echo  Q) Quit
 echo -
 echo ===================
@@ -47,6 +51,8 @@ if "%pla%"=="4" goto pla4
 if "%pla%"=="5" goto pla5
 if "%pla%"=="6" goto pla6
 if "%pla%"=="7" goto pla7
+if "%pla%"=="8" goto pla8
+if "%pla%"=="9" goto pla9
 if "%pla%"=="Q" goto quit1
 if "%pla%"=="q" goto quit1
 
@@ -54,7 +60,7 @@ if "%pla%"=="q" goto quit1
 :quit1
 exit
 
-::  1TWITTER
+::  skip1
 :pla1
 :begin
 cls
@@ -260,7 +266,7 @@ goto home1
 :exit
 @exit
 
-::  2AFREECATV
+::  skip2
 :pla2
 :begin
 cls
@@ -501,7 +507,7 @@ goto home1
 :exit
 @exit
 
-::  3YOUTUBE
+::  skip3
 :pla3
 :begin
 cls
@@ -563,7 +569,7 @@ echo   BphuDL\Downloads\YT\720p\
 echo  ===========================
 set "url=%~1"
 if not defined url set /p "url=Enter URL: "
-youtube-dl --no-playlist -f bestvideo[height<=720]+bestaudio[ext=m4a] -o Downloads\YT\720p\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url% &
+youtube-dl --no-playlist -f "bestvideo[height<=720]+bestaudio[ext=m4a]" -o Downloads\YT\720p\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
 :choice
 set /P v720=Open Download Folder [Y/N]?
@@ -586,7 +592,7 @@ echo   BphuDL\Downloads\YT\1080p\
 echo  ============================
 set "url=%~1"
 if not defined url set /p "url=Enter URL: "
-youtube-dl --no-playlist -f bestvideo[height<=1080]+bestaudio[ext=m4a] -o Downloads\YT\1080p\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+youtube-dl --no-playlist -f "bestvideo[height<=1080]+bestaudio[ext=m4a]" -o Downloads\YT\1080p\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
 :choice
 set /P v1080=Open Download Folder [Y/N]?
@@ -631,10 +637,8 @@ echo               Save Location:
 echo   BphuDL\Downloads\YT\720p\*You_Pick_Name*\
 echo  ============================================
 set "url=%~1"
-set "fldr=%~1"
 if not defined url set /p "url=Enter URL: "
-if not defined fldr set /p "fldr=Enter Playlist Name [No spaces, Use underscore]: "
-youtube-dl --yes-playlist -f bestvideo[height<=720]+bestaudio[ext=m4a] -o Downloads\YT\720p\%fldr%\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url% &
+youtube-dl --yes-playlist -f "bestvideo[height<=720]+bestaudio[ext=m4a]" -o Downloads\YT\720p\%%(playlist)s/%%(playlist_index)s-%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url% &
 TIMEOUT 1
 :choice
 set /P vp720=Open Download Folder [Y/N]?
@@ -642,7 +646,7 @@ if /I "%vp720%" EQU "Y" goto :vp720y
 if /I "%vp720%" EQU "N" goto :vp720n
 goto :choice
 :vp720y
-start Downloads\YT\720p\%fldr%\
+start Downloads\YT\720p\
 goto pla3
 :vp720n
 goto pla3
@@ -656,10 +660,8 @@ echo               Save Location:
 echo   BphuDL\Downloads\YT\1080p\*You_Pick_Name*\
 echo  ============================================
 set "url=%~1"
-set "fldr=%~1"
 if not defined url set /p "url=Enter URL: "
-if not defined fldr set /p "fldr=Enter Playlist Name [No spaces, Use underscores]: "
-youtube-dl --yes-playlist -f bestvideo[height<=1080]+bestaudio[ext=m4a] -o Downloads\YT\1080p\%fldr%\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+youtube-dl --yes-playlist -f "bestvideo[height<=1080]+bestaudio[ext=m4a]" -o Downloads\YT\1080p\%%(playlist)s/%%(playlist_index)s-%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
 :choice
 set /P vp1080=Open Download Folder [Y/N]?
@@ -667,7 +669,7 @@ if /I "%vp1080%" EQU "Y" goto :vp1080y
 if /I "%vp1080%" EQU "N" goto :vp1080n
 goto :choice
 :vp1080y
-start Downloads\YT\1080p\%fldr%\
+start Downloads\YT\1080p\
 goto pla3
 :vp1080n
 goto pla3
@@ -681,10 +683,8 @@ echo              Save Location:
 echo   BphuDL\Downloads\YT\HR\*You_Pick_Name*\
 echo  ==========================================
 set "url=%~1"
-set "fldr=%~1"
 if not defined url set /p "url=Enter URL: "
-if not defined fldr set /p "fldr=Enter Playlist Name [No spaces, Use underscores]: "
-youtube-dl --yes-playlist -f bestvideo+bestaudio -o Downloads\YT\HR\%fldr%\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mkv --add-metadata %url%
+youtube-dl --yes-playlist -f bestvideo+bestaudio -o Downloads\YT\HR\%%(playlist)s/%%(playlist_index)s-%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mkv --add-metadata %url%
 TIMEOUT 1
 :choice
 set /P vphr=Open Download Folder [Y/N]?
@@ -692,7 +692,7 @@ if /I "%vphr%" EQU "Y" goto :vphry
 if /I "%vphr%" EQU "N" goto :vphrn
 goto :choice
 :vphry
-start Downloads\YT\HR\%fldr%\
+start Downloads\YT\HR\
 goto pla3
 :vphrn
 goto pla3
@@ -707,7 +707,7 @@ echo   BphuDL\Downloads\YTMusic\720p\
 echo  ================================
 set "url=%~1"
 if not defined url set /p "url=Enter URL: "
-youtube-dl --no-playlist -f bestvideo[height<=720]+bestaudio[ext=m4a] -o Downloads\YTMusic\720p\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url% &
+youtube-dl --no-playlist -f "bestvideo[height<=720]+bestaudio[ext=m4a]" -o Downloads\YTMusic\720p\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url% &
 TIMEOUT 1
 :choice
 set /P m720=Open Download Folder [Y/N]?
@@ -730,7 +730,7 @@ echo   BphuDL\Downloads\YTMusic\1080p\
 echo  =================================
 set "url=%~1"
 if not defined url set /p "url=Enter URL: "
-youtube-dl --no-playlist -f bestvideo[height<=1080]+bestaudio[ext=m4a] -o Downloads\YTMusic\1080p\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+youtube-dl --no-playlist -f "bestvideo[height<=1080]+bestaudio[ext=m4a]" -o Downloads\YTMusic\1080p\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
 :choice
 set /P m1080=Open Download Folder [Y/N]?
@@ -775,10 +775,8 @@ echo                 Save Location:
 echo   BphuDL\Downloads\YTMusic\720p\*You_Pick_Name*\
 echo  =================================================
 set "url=%~1"
-set "fldr=%~1"
 if not defined url set /p "url=Enter URL: "
-if not defined fldr set /p "fldr=Enter Playlist Name [No spaces, Use underscores]: "
-youtube-dl --yes-playlist -f bestvideo[height<=720]+bestaudio[ext=m4a] -o Downloads\YTMusic\720p\%fldr%\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url% &
+youtube-dl --yes-playlist -f "bestvideo[height<=720]+bestaudio[ext=m4a]" -o Downloads\YTMusic\720p\%%(playlist)s/%%(playlist_index)s-%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url% &
 TIMEOUT 1
 :choice
 set /P mp720=Open Download Folder [Y/N]?
@@ -786,7 +784,7 @@ if /I "%mp720%" EQU "Y" goto :mp720y
 if /I "%mp720%" EQU "N" goto :mp720n
 goto :choice
 :mp720y
-start Downloads\YTMusic\720p\%fldr%\
+start Downloads\YTMusic\720p\
 goto pla3
 :mp720n
 goto pla3
@@ -800,10 +798,8 @@ echo                 Save Location:
 echo   BphuDL\Downloads\YTMusic\1080p\*You_Pick_Name*\
 echo  ==================================================
 set "url=%~1"
-set "fldr=%~1"
 if not defined url set /p "url=Enter URL: "
-if not defined fldr set /p "fldr=Enter Playlist Name [No spaces, Use underscores]: "
-youtube-dl --yes-playlist -f bestvideo[height<=1080]+bestaudio[ext=m4a] -o Downloads\YTMusic\1080p\%fldr%\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+youtube-dl --yes-playlist -f "bestvideo[height<=1080]+bestaudio[ext=m4a]" -o Downloads\YTMusic\1080p\%%(playlist)s/%%(playlist_index)s-%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
 :choice
 set /P mp1080=Open Download Folder [Y/N]?
@@ -811,7 +807,7 @@ if /I "%mp1080%" EQU "Y" goto :mp1080y
 if /I "%mp1080%" EQU "N" goto :mp1080n
 goto :choice
 :mp1080y
-start Downloads\YTMusic\1080p\%fldr%\
+start Downloads\YTMusic\1080p\
 goto pla3
 :mp1080n
 goto pla3
@@ -825,10 +821,8 @@ echo               Save Location:
 echo   BphuDL\Downloads\YTMusic\HR\*You_Pick_Name*\
 echo  ===============================================
 set "url=%~1"
-set "fldr=%~1"
 if not defined url set /p "url=Enter URL: "
-if not defined fldr set /p "fldr=Enter Playlist Name [No spaces, Use underscores]: "
-youtube-dl --yes-playlist -f bestvideo+bestaudio -o Downloads\YTMusic\HR\%fldr%\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mkv --add-metadata %url%
+youtube-dl --yes-playlist -f bestvideo+bestaudio -o Downloads\YTMusic\HR\%%(playlist)s/%%(playlist_index)s-%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mkv --add-metadata %url%
 TIMEOUT 1
 :choice
 set /P mphr=Open Download Folder [Y/N]?
@@ -836,7 +830,7 @@ if /I "%mphr%" EQU "Y" goto :mphry
 if /I "%mphr%" EQU "N" goto :mphrn
 goto :choice
 :mphry
-start Downloads\YTMusic\HR\%fldr%\
+start Downloads\YTMusic\HR\
 goto pla3
 :mphrn
 goto pla3
@@ -873,10 +867,8 @@ echo                    Save Location:
 echo   BphuDL\Downloads\YTMusic\AudioOnly\*You_Pick_Name*\
 echo  ======================================================
 set "url=%~1"
-set "fldr=%~1"
 if not defined url set /p "url=Enter URL: "
-if not defined fldr set /p "fldr=Enter Playlist Name [No spaces, Use underscores]: "
-youtube-dl --yes-playlist -o Downloads\YTMusic\AudioOnly\%fldr%\%%(title)s.%%(ext)s -x --audio-format mp3 --audio-quality 0 --add-metadata %url%
+youtube-dl --yes-playlist -o Downloads\YTMusic\AudioOnly\%%(playlist)s/%%(playlist_index)s-%%(title)s.%%(ext)s -x --audio-format mp3 --audio-quality 0 --add-metadata %url%
 TIMEOUT 1
 :choice
 set /P mpao=Open Download Folder [Y/N]?
@@ -884,10 +876,9 @@ if /I "%mpao%" EQU "Y" goto :mpaoy
 if /I "%mpao%" EQU "N" goto :mpaon
 goto :choice
 :mpaoy
-start Downloads\YTMusic\AudioOnly\%fldr%\
-goto pla3
+start Downloads\YTMusic\AudioOnly\
 :mpaon
-goto pla31
+goto pla3
 
 ::  Music - Audio Only from TXT File
 :yt15
@@ -913,7 +904,7 @@ goto pla3
 :exit
 @exit
 
-::  4PORN
+::  skip4
 :pla4
 :begin
 cls
@@ -1132,7 +1123,7 @@ goto home1
 :exit
 @exit
 
-::  5TWITCH
+::  skip5
 :pla5
 :begin
 cls
@@ -1219,7 +1210,7 @@ ffplay -i "%url%"
 :exit
 @exit
 
-::  6REDDIT
+::  skip6
 :pla6
 cls
 echo :::::::::  :::::::::: :::::::::  ::::::::: ::::::::::: ::::::::::: 
@@ -1249,7 +1240,7 @@ goto home1
 :red1n
 goto home1
 
-::  7OTHER
+::  skip7
 :pla7
 
 cls
@@ -1286,6 +1277,193 @@ start Downloads\Other\
 goto home1
 :oth1n
 goto home1
+
+:: skip8
+:pla8
+:begin
+cls
+echo  :::   ::: ::::::::::: :::::::::  :::        ::::::::::: :::      ::::::::   ::::::::  
+echo  :+:   :+:     :+:     :+:    :+: :+:            :+:   :+: :+:   :+:    :+: :+:    :+: 
+echo   +:+ +:+      +:+     +:+    +:+ +:+            +:+  +:+   +:+  +:+        +:+        
+echo    +#++:       +#+     +#+    +:+ +#+            +#+ +#++:++#++: :#:        +#++:++#++ 
+echo     +#+        +#+     +#+    +#+ +#+            +#+ +#+     +#+ +#+   +#+#        +#+ 
+echo     #+#        #+#     #+#    #+# #+#            #+# #+#     #+# #+#    #+# #+#    #+# 
+echo     ###        ###     #########  ##########     ### ###     ###  ########   ########  
+echo ===================
+echo  youtube-dl tags:
+echo ===================
+echo -
+echo  1) youtube-dl -F
+echo  2) youtube-dl -j
+echo  3) Empty
+echo  4) Empty
+echo  Q) Main Menu
+echo -
+echo ===================
+set /p ytf=Pick an Option:
+if "%ytf%"=="1" goto ytf1
+if "%ytf%"=="2" goto ytf2
+if "%ytf%"=="3" goto ytf3
+if "%ytf%"=="4" goto ytf4
+if "%ytf%"=="Q" goto home1
+if "%ytf%"=="q" goto home1
+
+
+::  Youtube-dl -F
+:ytf1
+cls
+set "url=%~1"
+if not defined url set /p "url=Enter URL: "
+youtube-dl -F %url%
+TIMEOUT 1
+:choice
+set /P ytfh1=Return Home? [Y/N]?
+if /I "%ytfh1%" EQU "Y" goto :ytfh1y
+if /I "%ytfh1%" EQU "N" goto :ytfh1n
+goto :choice
+:ytfh1y
+goto pla8
+:ytfh1n
+exit
+
+::  Youtube-dl -j
+:ytf2
+cls
+set "url=%~1"
+if not defined url set /p "url=Enter URL: "
+youtube-dl -j %url%
+TIMEOUT 1
+:choice
+set /P ytfh2=Return Home? [Y/N]?
+if /I "%ytfh2%" EQU "Y" goto :ytfh2y
+if /I "%ytfh2%" EQU "N" goto :ytfh2n
+goto :choice
+:ytfh2y
+goto pla8
+:ytfh2n
+exit
+
+::  Empty
+:ytf3
+cls
+set "url=%~1"
+if not defined url set /p "url=Enter URL: "
+[ENTER COMMAND HERE]
+TIMEOUT 1
+:choice
+set /P ytfh3=Return Home? [Y/N]?
+if /I "%ytfh3%" EQU "Y" goto :ytfh3y
+if /I "%ytfh3%" EQU "N" goto :ytfh3n
+goto :choice
+:ytfh3y
+goto pla8
+:ytfh3n
+exit
+
+::  Empty
+:ytf4
+cls
+set "url=%~1"
+if not defined url set /p "url=Enter URL: "
+[ENTER COMMAND HERE]
+TIMEOUT 1
+:choice
+set /P ytfh4=Return Home? [Y/N]?
+if /I "%ytfh4%" EQU "Y" goto :ytfh4y
+if /I "%ytfh4%" EQU "N" goto :ytfh4n
+goto :choice
+:ytfh4y
+goto pla8
+:ytfh4n
+exit
+
+::  skip9
+:pla9
+:begin
+cls
+echo  ::::::::: ::::::::::: :::::::::  
+echo  :+:    :+:    :+:     :+:    :+: 
+echo  +:+    +:+    +:+     +:+    +:+ 
+echo  +#+    +:+    +#+     +#++:++#:  
+echo  +#+    +#+    +#+     +#+    +#+ 
+echo  #+#    #+#    #+#     #+#    #+# 
+echo  ######### ########### ###    ### 
+echo ===================
+echo  Directories:
+echo ===================
+echo -
+echo  1) Twitter
+echo  2) AfreecaTV
+echo  3) Youtube
+echo  4) Youtube Music
+echo  5) Porn
+echo  6) Twitch
+echo  7) Reddit
+echo  8) Other
+echo  9) BphuDL
+echo  Q) Main Menu
+echo -
+echo ===================
+set /p dir1=Pick a Directory:
+if "%dir1%"=="1" goto dir11
+if "%dir1%"=="2" goto dir12
+if "%dir1%"=="3" goto dir13
+if "%dir1%"=="4" goto dir14
+if "%dir1%"=="5" goto dir15
+if "%dir1%"=="6" goto dir16
+if "%dir1%"=="7" goto dir17
+if "%dir1%"=="8" goto dir18
+if "%dir1%"=="9" goto dir19
+if "%dir1%"=="Q" goto home1
+if "%dir1%"=="q" goto home1
+
+:: Twitter
+:dir11
+start Downloads\Twitter\
+goto pla9
+
+:: AfreecaTV
+:dir12
+start Downloads\AfreecaTV\
+goto pla9
+
+:: Youtube
+:dir13
+start Downloads\YT\
+goto pla9
+
+:: Youtube Music
+:dir14
+start Downloads\YTMusic\
+goto pla9
+
+:: Porn
+:dir15
+start Downloads\Porn\
+goto pla9
+
+:: Twitch
+:dir16
+start Downloads\Twitch\
+goto pla9
+
+:: Reddit
+:dir17
+start Downloads\Reddit\
+goto pla9
+
+:: Other
+:dir18
+start Downloads\Other\
+goto pla9
+
+::  BphuDL
+:dir19
+start .
+goto pla9
+
+:exit
+@exit
 
 :exit
 @exit

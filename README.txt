@@ -11,6 +11,36 @@ This batch file uses youtube-dl and ffmpeg to do the downloading.  If you are tr
 
 If a video download is not working, your best bet is to check: https://github.com/ytdl-org/youtube-dl/issues and see if there is an issue that has been reported.  Example at the time of writing this: Xhamster isnt working by just pasting the URL into the batch file.  You will need to Inspect elements > click Network Tab and make sure Media is selected on the right side.  Right click the video you want and Copy the url. At this point, the batch file is useless because you can just paste the link into your browser and save it that way.
 
+==========================
+Youtube 720p/1080p and HR
+==========================
+My Youtube-dl strings for Youtube videos uses the height as the determining factor when selecting which format to download.
+
+When dealing with a video that has an irregular video height x width; you may get, what you think, is the wrong resolution.  An example would be a video like: https://www.youtube.com/watch?v=0HO_tNU8iGs
+It will give you this output:
+136          mp4        1280x640   720p  834k , avc1.4d401f, 24fps, video only, 8.73MiB
+398          mp4        1280x640   720p  994k , av01.0.05M.08, 24fps, video only, 11.94MiB
+247          webm       1280x640   720p 1003k , vp9, 24fps, video only, 9.50MiB
+399          mp4        1920x960   1080p 1799k , av01.0.08M.08, 24fps, video only, 19.83MiB
+248          webm       1920x960   1080p 2331k , vp9, 24fps, video only, 25.47MiB
+137          mp4        1920x960   1080p 2921k , avc1.640028, 24fps, video only, 30.41MiB
+
+It has a normal 720p width (1280) but the height has been lowered.  So when using the 720p option to download, you will get 1280x640.  Same goes for if you select the 1080p download option, it will give you 1920x960.
+
+There are extreme examples where the 1080p and the 720p will give you the same video.  Take https://www.youtube.com/watch?v=dktW5r4ldyo as an example.
+It will give you this output:
+247          webm       1280x448   720p 1149k , vp9, 24fps, video only, 18.85MiB
+136          mp4        1280x448   720p 1562k , avc1.64001f, 24fps, video only, 30.05MiB
+248          webm       1920x672   1080p 2172k , vp9, 24fps, video only, 33.53MiB
+137          mp4        1920x672   1080p 3154k , avc1.640020, 24fps, video only, 62.13MiB
+
+Both have normal 720p and 1080p widths, but the height is almost cut in half.  So if you use 720p or the 1080p, you will get the same file, 1920x672.
+
+I could use the width as the determining factor, but you will have the same issue if you come across videos with normal heights but irregular widths. (think of cellphone video)
+
+The High Resolution option will save the files in MKV format instead of MP4.  High Resoultion is to be used for the highest resolution and the best quality possible and youtube sends that in webm format (highest Total Bitrate).  Ive had an issue trying to download both the audio webm and the video webm and then merge and covert them to mp4 using ffmpeg.  If you dont want MKV, then download an MKV to MP4 converter, or just use VLC player to convert.
+
+
 =================
 Pornhub Premium
 =================
