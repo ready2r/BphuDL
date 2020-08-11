@@ -7,9 +7,18 @@ PREFIX
 =================
 https://github.com/ytdl-org/youtube-dl/
 Do not move any of the .exe files or the batch file from the location they are in.
-This batch file uses youtube-dl and ffmpeg to do the downloading.  If you are trying to download a video from an obscure source and it doesn't work, its not the batch file's fault, It's a youtube-dl issue.  A ton of people work hard on youtube-dl, so most sites should work.  I will warn you, there are new hosting sites coming out that this will not work on.  The way the new sites are sending the data to the end user makes it hard for youtube-dl to download it.(im not an expert but i think i read that it has to do with the data expiring extremely fast). An example site would be Sproutvideo.  There are other programs you can use to download from these new sites.
+This batch file uses youtube-dl and ffmpeg to do the downloading.  If you are trying to download a video from an obscure source and it doesn't work, its not the batch file's fault, It's a youtube-dl issue.  A ton of people work hard on youtube-dl, so most sites should work.  I will warn you, there are new hosting sites coming out that this will not work on.  The way the new sites are sending the data to the end user makes it more difficult for youtube-dl to work. An example site would be Sproutvideo.  There are other programs you can use to download from these new sites.
 
-If a video download is not working, your best bet is to check: https://github.com/ytdl-org/youtube-dl/issues and see if there is an issue that has been reported.  Example at the time of writing this: Xhamster isnt working by just pasting the URL into the batch file.  You will need to Inspect elements > click Network Tab and make sure Media is selected on the right side.  Right click the video you want and Copy the url. At this point, the batch file is useless because you can just paste the link into your browser and save it that way.
+If a video download is not working, your best bet is to check: https://ytdl-org.github.io/youtube-dl/supportedsites.html and see if the site is supported.  One note, when sites change their code in relation to the video, it will sometimes break youtube-dl.  An example site as of typing this is Xhamster.  Its on the list as supported, but its currently not working because of a change on Xhamster's end.  You can always check the Issues tabs and see if someone made a report for it.  In which case they did, and the fix has already been found but has not been implemented: https://github.com/ytdl-org/youtube-dl/issues/26157
+
+==========================
+Updating Youtube-DL
+==========================
+Keeping youtube-dl.exe up to date is important.  To update you can open CMD in BphuDL's location (open the folder and towards the top where it lists the path name, click it and type CMD and hit enter) and type:
+
+youtube-dl -U
+
+Alternatively, you can just run the Update_YTDL.bat and it will do the same thing.
 
 ==========================
 Youtube 720p/1080p and HR
