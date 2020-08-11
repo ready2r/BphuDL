@@ -1,13 +1,13 @@
 Most of it is pretty straight forward..
 
-If you have any questions, you can msg me on Discord: Bphu#0001
+If you have any questions, you can msg me on Discord: Bphu#0001.  Warning: I am not an expert on batchfile or youtube-dl.  This was more of a learning process than anything else.
 
 =================
-PREFIX
+Disclaimer
 =================
 https://github.com/ytdl-org/youtube-dl/
 Do not move any of the .exe files or the batch file from the location they are in.
-This batch file uses youtube-dl and ffmpeg to do the downloading.  If you are trying to download a video from an obscure source and it doesn't work, its not the batch file's fault, It's a youtube-dl issue.  A ton of people work hard on youtube-dl, so most sites should work.  I will warn you, there are new hosting sites coming out that this will not work on.  The way the new sites are sending the data to the end user makes it more difficult for youtube-dl to work. An example site would be Sproutvideo.  There are other programs you can use to download from these new sites.
+This batch file uses youtube-dl and ffmpeg to do the downloading. A ton of people work hard on youtube-dl, so most sites should work.  I will warn you, there are new hosting sites coming out that this will not work on.  The way the new sites are sending the data to the end user makes it more difficult for youtube-dl to work. An example site would be Sproutvideo.  There are other programs you can use to download from these new sites.
 
 If a video download is not working, your best bet is to check: https://ytdl-org.github.io/youtube-dl/supportedsites.html and see if the site is supported.  One note, when sites change their code in relation to the video, it will sometimes break youtube-dl.  An example site as of typing this is Xhamster.  Its on the list as supported, but its currently not working because of a change on Xhamster's end.  You can always check the Issues tabs and see if someone made a report for it.  In which case they did, and the fix has already been found but has not been implemented: https://github.com/ytdl-org/youtube-dl/issues/26157
 
@@ -19,6 +19,18 @@ Keeping youtube-dl.exe up to date is important.  To update you can open CMD in B
 youtube-dl -U
 
 Alternatively, you can just run the Update_YTDL.bat and it will do the same thing.
+
+==========================
+Youtube Age Restriction
+==========================
+https://www.reddit.com/r/youtubedl/comments/hvl8rq/age_restriction/
+Youtube requires verification when downloading age restricted videos.  As of now, youtube-dl bypasses this by using your browser cookies to access and download the videos.  They are currently working on a way to bypass age restriction without the use of cookies, but it has not been pushed to a youtube-dl releases yet.  
+
+I know some people may be wary about using cookies so i gave you an option to not use cookies when downloading videos, but you wont be able to download age restricted videos. 
+
+If you dont mind having cookies in a text document, then continue reading: 
+
+You can obtain the cookies however you want, but the easiest way to do it is using the addon "Cookies.txt".  Its available for both Chrome and Firefox.  Once installed, go to Youtube and make sure you are logged into an account that is able to access age restricted videos.  Once logged in, use the "export cookies" button in your addon's toolbar and select "Current Site".  Save the cookies.txt as YTcookies.txt and put it in the cookies folder in the base directory [BphuDL/cookies/YTcookies.txt].  
 
 ==========================
 Youtube 720p/1080p and HR
@@ -54,12 +66,16 @@ The High Resolution option will save the files in MKV format instead of MP4.  Hi
 Pornhub Premium
 =================
 Pornhub Premium requires authentication to download videos using youtube-dl.
-If you have Pornhub Premium, you can download the videos by setting up a cookies.txt file in the home folder [same folder as the batch file] In order to get the cookie data from your Pornhub Premium site, you have a few options.. but the easiest would be to use a browser addon called Cookies.txt (they have it for Chrome and Firefox).  Once the addon is installed.. Log into Pornhub Premium and then use the addon button to download the cookies.txt file and save it to the home folder mentioned earlier. [same folder as the batch file]
+If you have Pornhub Premium, you can download videos by enabling cookies through youtube-dl, similar to Youtube Age Restriction.  If you do not wish to use cookies, use the regular Pornhub option.  You must logout of Pornhub Premium to download non-Pornhub Premium videos.  Your URL must be Pornhub.com and not Pornhubpremium.com.
+
+If you dont mind having cookies in a text document, then continue reading: 
+
+You can obtain the cookies however you want, but the easiest way to do it is using the addon "Cookies.txt".  Its available for both Chrome and Firefox.  Once installed, go to Pornhubpremium.com and make sure you are logged into an account has Pornhub Premium.  Once logged in, use the "export cookies" button in your addon's toolbar and select "Current Site".  Save the cookies.txt as PHcookies.txt and put it in the cookies folder in the base directory [BphuDL/cookies/PHcookies.txt].
 
 =================
 Other Porn Sites
 =================
-I tested a few other pornsites and most of them work.  M-less you have to right click the video and get the link that way.  Most of the others you can just paste the browser URL. Xhamster is currently not working.  See Prefix for explaination.
+I tested a few other pornsites and most of them work.  M-less you have to right click the video and get the link that way.  Most of the others you can just paste the browser URL. Xhamster is currently not working.  See Disclaimer for explaination.
 
 =================
 AfreecaTV Login
@@ -84,7 +100,7 @@ Youtube Music AudioOnlyDownloadList.txt is used to download a bunch of random au
 ==========================
 Menu Customization
 ==========================
-The menus are easily customizable.  Its benefical to add commonly downloaded streamers or porn sites to the list.  This will put their videos in their own folder together. The easiest way to edit the extra menus is by using "Find and Replace" in notepad. CTRL+H will bring it up. An example would be changing TWITUSER-TWO to someone else.  Put TWITUSER-TWO into the "Find what" field and the user who you want to add in the "Replace with" field.  Check "Match case" and click Replace All.  This will make it so using that user option when running the batch file will put the new downloaded videos in the user's own folder.  Like with most things, DO NOT USE SPACES, use underscores instead.
+The menus are easily customizable.  Its benefical to add commonly downloaded streamers or porn sites to the list.  This will put their videos in their own folder together. The easiest way to edit the extra menus is by using "Find and Replace" in notepad. CTRL+H will bring it up. An example would be changing TWITUSER2 to someone else.  Put TWITUSER2 into the "Find what" field and the user who you want to add in the "Replace with" field.  Check "Match case" and click Replace All.  This will make it so using that user option when running the batch file will put the new downloaded videos in the user's own folder.  Like with most things, DO NOT USE SPACES, use underscores instead.
 
 Thats about it.  Like I said, if you have any more questions.. just msg me on Discord: Bphu#0001
 
