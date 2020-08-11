@@ -50,8 +50,7 @@ If you have Pornhub Premium, you can download the videos by setting up a cookies
 =================
 Other Porn Sites
 =================
-I tested a few other pornsites and most of them work.  M-less you have to right click the video and get the link that way.. 
-Most of the others you can just paste the browser URL. Xhamster is currently not working.  See Prefix for explaination.
+I tested a few other pornsites and most of them work.  M-less you have to right click the video and get the link that way.  Most of the others you can just paste the browser URL. Xhamster is currently not working.  See Prefix for explaination.
 
 =================
 AfreecaTV Login
@@ -71,9 +70,7 @@ You can use this for whatever.  If you want to keep videos seperate from the oth
 ==========================
 AudioOnlyDownloadList.txt
 ==========================
-Youtube Music AudioOnlyDownloadList.txt is used to download a bunch of random audio only songs together.  Put each youtube url 
-on its own line and then save the file.  Run the batch and select Youtube[3]>Music - Audio Only from TXT file[6] and it will 
-download all the songs in the txt file
+Youtube Music AudioOnlyDownloadList.txt is used to download a bunch of random audio only songs together.  Put each youtube url on its own line and then save the file.  Run the batch and select Youtube[3]>Music - Audio Only from TXT file[6] and it will download all the songs in the txt file
 
 ==========================
 Menu Customization
