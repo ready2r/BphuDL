@@ -27,7 +27,7 @@ echo This batch file uses youtube-dl and ffmpeg to download videos from
 echo the platforms below. Please read the README.txt if you have any 
 echo questions!
 echo ===================================================================
-
+echo -
 echo ===================
 echo  Platform:
 echo ===================
@@ -526,22 +526,22 @@ echo ===========================================================================
 echo  Youtube Video Type:
 echo ====================================================================================================================
 echo -
-echo   1) Video - 720p
-echo   2) Video - 1080p
-echo   3) Video - Highest Resolution
-echo   4) Video Playlist - 720p
-echo   5) Video Playlist - 1080p
-echo   6) Video Playlist - Highest Resolution
-echo   7) Music Video - 720p
-echo   8) Music Video - 1080p
-echo   9) Music Video - Highest Resolution
+echo  1)  Video - 720p
+echo  2)  Video - 1080p
+echo  3)  Video - Highest Resolution
+echo  4)  Video Playlist - 720p
+echo  5)  Video Playlist - 1080p
+echo  6)  Video Playlist - Highest Resolution
+echo  7)  Music Video - 720p
+echo  8)  Music Video - 1080p
+echo  9)  Music Video - Highest Resolution
 echo  10) Music Video Playlist - 720p
 echo  11) Music Video Playlist - 1080p
 echo  12) Music Video Playlist - Highest Resolution
 echo  13) Music - Audio Only
 echo  14) Music Playlist - Audio Only
 echo  15) Music - Audio Only from TXT File
-echo   Q) Main Menu
+echo  Q)  Main Menu
 echo -
 echo ====================================================================================================================
 set /p yt=Pick a Type:
@@ -1320,7 +1320,6 @@ echo +#+    +:+    +#+     +#++:++#++ +#++:++#   +#++:++#:
 echo +#+    +#+    +#+     +#+    +#+ +#+        +#+    +#+ 
 echo #+#    #+#    #+#     #+#    #+# #+#        #+#    #+# 
 echo  ########     ###     ###    ### ########## ###    ### 
-
 echo =========================================================================
 echo  Other -  Use this for any random site not related to the other options.
 echo                             Save Location:
@@ -1548,7 +1547,7 @@ goto dir10
 start Downloads\Other\
 goto dir10
 
-::  BphuDL
+:: BphuDL
 :dir20
 start .
 goto dir10
