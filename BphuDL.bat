@@ -60,10 +60,6 @@ if "%pla%"=="Q" goto quit1
 if "%pla%"=="q" goto quit1
 goto home1
 
-::  Quit
-:quit1
-exit
-
 ::  skip1
 :pla1
 cls
@@ -85,12 +81,13 @@ echo  Otherwise just select the first option
 echo ==========================================
 echo -
 echo  1) Download Video
-echo  2) TWITUSER2
-echo  3) TWITUSER4
-echo  4) TWITUSER4
-echo  5) TWITUSER5
-echo  6) TWITUSER6
-echo  Q) Main Menu
+echo  2)  TWITUSER2
+echo  3)  TWITUSER4
+echo  4)  TWITUSER4
+echo  5)  TWITUSER5
+echo  6)  TWITUSER6
+echo  Q)  Main Menu
+echo  QQ) Quit
 echo -
 echo ===================
 set /p twr=Pick a User:
@@ -102,6 +99,8 @@ if "%twr%"=="5" goto twr5
 if "%twr%"=="6" goto twr6
 if "%twr%"=="Q" goto home1
 if "%twr%"=="q" goto home1
+if "%twr%"=="QQ" goto quit1
+if "%twr%"=="qq" goto quit1
 goto pla1
 
 ::  Download Video
@@ -117,8 +116,8 @@ set "hls=%~1"
 echo ===========================================================
 echo  Pick Format Code from the left column [example: hls-2783]
 echo ===========================================================
-if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-": "
-youtube-dl -f "hls-%hls%" -o Downloads\Twitter\%%(uploader)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
+youtube-dl -f "hls-%hls%" -o Downloads\Twitter\%%(uploader_id)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
 :choice
 set /P tdv1=Open Download Folder [Y/N]?
@@ -144,8 +143,8 @@ set "hls=%~1"
 echo ===========================================================
 echo  Pick Format Code from the left column [example: hls-2783]
 echo ===========================================================
-if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-": "
-youtube-dl -f "hls-%hls%" -o Downloads\Twitter\Users\TWITUSER2\%%(uploader)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
+youtube-dl -f "hls-%hls%" -o Downloads\Twitter\Users\TWITUSER2\%%(uploader_id)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
 :choice
 set /P twu1=Open Download Folder [Y/N]?
@@ -171,8 +170,8 @@ set "hls=%~1"
 echo ===========================================================
 echo  Pick Format Code from the left column [example: hls-2783]
 echo ===========================================================
-if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-": "
-youtube-dl -f "hls-%hls%" -o Downloads\Twitter\Users\TWITUSER3\%%(uploader)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
+youtube-dl -f "hls-%hls%" -o Downloads\Twitter\Users\TWITUSER3\%%(uploader_id)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
 :choice
 set /P twu2=Open Download Folder [Y/N]?
@@ -198,8 +197,8 @@ set "hls=%~1"
 echo ===========================================================
 echo  Pick Format Code from the left column [example: hls-2783]
 echo ===========================================================
-if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-": "
-youtube-dl -f "hls-%hls%" -o Downloads\Twitter\Users\TWITUSER4\%%(uploader)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
+youtube-dl -f "hls-%hls%" -o Downloads\Twitter\Users\TWITUSER4\%%(uploader_id)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
 :choice
 set /P twu3=Open Download Folder [Y/N]?
@@ -225,8 +224,8 @@ set "hls=%~1"
 echo ===========================================================
 echo  Pick Format Code from the left column [example: hls-2783]
 echo ===========================================================
-if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-": "
-youtube-dl -f "hls-%hls%" -o Downloads\Twitter\Users\TWITUSER5\%%(uploader)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
+youtube-dl -f "hls-%hls%" -o Downloads\Twitter\Users\TWITUSER5\%%(uploader_id)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
 :choice
 set /P twu4=Open Download Folder [Y/N]?
@@ -252,8 +251,8 @@ set "hls=%~1"
 echo ===========================================================
 echo  Pick Format Code from the left column [example: hls-2783]
 echo ===========================================================
-if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-": "
-youtube-dl -f "hls-%hls%" -o Downloads\Twitter\Users\TWITUSER6\%%(uploader)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
+youtube-dl -f "hls-%hls%" -o Downloads\Twitter\Users\TWITUSER6\%%(uploader_id)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
 :choice
 set /P twu5=Open Download Folder [Y/N]?
@@ -289,13 +288,14 @@ echo  AfreecaTV user name. CTRL+H is your friend.
 echo  Otherwise just select the first option
 echo ============================================
 echo -
-echo  1) Download Video
-echo  2) ATVUSER2
-echo  3) ATVUSER3
-echo  4) ATVUSER4
-echo  5) ATVUSER5
-echo  6) ATVUSER6
-echo  Q) Main Menu
+echo  1)  Download Video
+echo  2)  ATVUSER2
+echo  3)  ATVUSER3
+echo  4)  ATVUSER4
+echo  5)  ATVUSER5
+echo  6)  ATVUSER6
+echo  Q)  Main Menu
+echo  QQ) Quit
 echo -
 echo ====================
 set /p op=Pick a streamer:
@@ -307,6 +307,8 @@ if "%op%"=="5" goto op5
 if "%op%"=="6" goto op6
 if "%op%"=="Q" goto home1
 if "%op%"=="q" goto home1
+if "%op%"=="QQ" goto quit1
+if "%op%"=="qq" goto quit1
 goto pla2
 
 ::  Download Video
@@ -327,7 +329,7 @@ set "spc=%~1"
 echo ===========================================================
 echo  Pick Format Code from the left column [example: hls-2783]
 echo ===========================================================
-if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-" "
+if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
 if not defined spc set /p "spc=Special Tag? [Funny/Tits/Ass/whatever]: "
 youtube-dl -f "hls-%hls%" --audio-quality 0 -o Downloads\AfreecaTV\[%spc%]-%%(id)s-%%(resolution)s.%%(ext)s -u %user% -p %pwd% --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
@@ -360,7 +362,7 @@ set "spc=%~1"
 echo ===========================================================
 echo  Pick Format Code from the left column [example: hls-2783]
 echo ===========================================================
-if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-" "
+if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
 if not defined spc set /p "spc=Special Tag? [Funny/Tits/Ass/whatever]: "
 youtube-dl -f "hls-%hls%" --audio-quality 0 -o Downloads\AfreecaTV\Users\ATVUSER2\[%spc%]-ATVUSER2-%%(id)s-%%(resolution)s.%%(ext)s -u %user% -p %pwd% --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
@@ -393,7 +395,7 @@ set "spc=%~1"
 echo ===========================================================
 echo  Pick Format Code from the left column [example: hls-2783]
 echo ===========================================================
-if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-" "
+if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
 if not defined spc set /p "spc=Special Tag? [Funny/Tits/Ass/whatever]: "
 youtube-dl -f "hls-%hls%" --audio-quality 0 -o Downloads\AfreecaTV\Users\ATVUSER3\[%spc%]-ATVUSER3-%%(id)s-%%(resolution)s.%%(ext)s -u %user% -p %pwd% --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
@@ -426,7 +428,7 @@ set "spc=%~1"
 echo ===========================================================
 echo  Pick Format Code from the left column [example: hls-2783]
 echo ===========================================================
-if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-" "
+if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
 if not defined spc set /p "spc=Special Tag? [Funny/Tits/Ass/whatever]: "
 youtube-dl -f "hls-%hls%" --audio-quality 0 -o Downloads\AfreecaTV\Users\ATVUSER4\[%spc%]-ATVUSER4-%%(id)s-%%(resolution)s.%%(ext)s -u %user% -p %pwd% --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
@@ -459,7 +461,7 @@ set "spc=%~1"
 echo ===========================================================
 echo  Pick Format Code from the left column [example: hls-2783]
 echo ===========================================================
-if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-" "
+if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
 if not defined spc set /p "spc=Special Tag? [Funny/Tits/Ass/whatever]: "
 youtube-dl -f "hls-%hls%" --audio-quality 0 -o Downloads\AfreecaTV\Users\ATVUSER5\[%spc%]ATVUSER5-%%(id)s-%%(resolution)s.%%(ext)s -u %user% -p %pwd% --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
@@ -492,7 +494,7 @@ set "spc=%~1"
 echo ===========================================================
 echo  Pick Format Code from the left column [example: hls-2783]
 echo ===========================================================
-if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-" "
+if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
 if not defined spc set /p "spc=Special Tag? [Funny/Tits/Ass/whatever]: "
 youtube-dl -f "hls-%hls%" --audio-quality 0 -o Downloads\AfreecaTV\Users\ATVUSER6\[%spc%]ATVUSER6-%%(id)s-%%(resolution)s.%%(ext)s -u %user% -p %pwd% --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
@@ -525,9 +527,10 @@ echo  Age Restricted or not?
 echo  Age Restricted requires YTcookies.txt - See README.TXT
 echo ====================================================================================================================
 echo -
-echo 1) Non-Age Restricted
-echo 2) Age Restricted
-echo Q) Main Menu
+echo  1)  Non-Age Restricted
+echo  2)  Age Restricted
+echo  Q)  Main Menu
+echo  QQ) Quit
 echo -
 echo ====================================================================================================================
 set /p arv=Pick an Option:
@@ -535,6 +538,8 @@ if "%arv%"=="1" goto pla3a
 if "%arv%"=="2" goto pla3b
 if "%arv%"=="Q" goto home1
 if "%arv%"=="q" goto home1
+if "%arv%"=="QQ" goto quit1
+if "%arv%"=="qq" goto quit1
 goto pla3
 
 ::  skip3a
@@ -568,6 +573,7 @@ echo  13) Music - Audio Only
 echo  14) Music Playlist - Audio Only
 echo  15) Music - Audio Only from TXT File
 echo  Q)  Main Menu
+echo  QQ) Quit
 echo -
 echo ====================================================================================================================
 set /p yta=Pick a Type:
@@ -588,6 +594,8 @@ if "%yta%"=="14" goto yta14
 if "%yta%"=="15" goto yta15
 if "%yta%"=="Q" goto home1
 if "%yta%"=="q" goto home1
+if "%yta%"=="QQ" goto quit1
+if "%yta%"=="qq" goto quit1
 goto pla3a
 
 ::  Video - 720p
@@ -967,6 +975,7 @@ echo  13) Music - Audio Only
 echo  14) Music Playlist - Audio Only
 echo  15) Music - Audio Only from TXT File
 echo  Q)  Main Menu
+echo  QQ) Quit
 echo -
 echo ====================================================================================================================
 set /p ytb=Pick a Type:
@@ -987,6 +996,8 @@ if "%ytb%"=="14" goto ytb14
 if "%ytb%"=="15" goto ytb15
 if "%ytb%"=="Q" goto home1
 if "%ytb%"=="q" goto home1
+if "%ytb%"=="QQ" goto quit1
+if "%ytb%"=="qq" goto quit1
 goto pla3b
 
 ::  Video - 720p
@@ -1349,10 +1360,11 @@ echo ======================================
 echo  Play or Save
 echo ======================================
 echo - 
-echo  1) Save Clip
-echo  2) Save a Stream While They are Live
-echo  3) Play a Live Stream in CMD
-echo  Q) Main Menu
+echo  1)  Save Clip
+echo  2)  Save a Stream While They are Live
+echo  3)  Play a Live Stream in CMD
+echo  Q)  Main Menu
+echo  QQ) Quit
 echo -
 echo ======================================
 set /p tlv=Pick an Option:
@@ -1361,6 +1373,8 @@ if "%tlv%"=="2" goto tlv2
 if "%tlv%"=="3" goto tlv3
 if "%tlv%"=="Q" goto home1
 if "%tlv%"=="q" goto home1
+if "%tlv%"=="QQ" goto quit1
+if "%tlv%"=="qq" goto quit1
 goto pla4
 
 :: Save Clip
@@ -1439,14 +1453,17 @@ echo                 Save Location:
 echo           BphuDL/Downloads/Instagram
 echo ================================================
 echo -
-echo  1) Download Video
-echo  Q) Main Menu
+echo  1)  Download Video
+echo  Q)  Main Menu
+echo  QQ) Quit
 echo -
 echo ================================================
 set /p inst=Pick an Option:
 if "%inst%"=="1" goto inst1
 if "%inst%"=="Q" goto home1
 if "%inst%"=="q" goto home1
+if "%inst%"=="QQ" goto quit1
+if "%inst%"=="qq" goto quit1
 goto pla5
 
 ::  Instagram
@@ -1485,14 +1502,18 @@ echo       Save Location:
 echo  BphuDL\Downloads\Reddit\
 echo ==========================
 echo -
-echo  1) Download Video
-echo  Q) Main Menu
+echo  1)  Download Video
+echo  Q)  Main Menu
+echo  QQ) Quit
 echo -
 echo ==========================
 set /p redd=Pick an Option:
 if "%redd%"=="1" goto redd1
 if "%redd%"=="Q" goto home1
 if "%redd%"=="q" goto home1
+if "%redd%"=="QQ" goto quit1
+if "%redd%"=="qq" goto quit1
+
 goto :pla6
 
 ::  Download Video
@@ -1535,13 +1556,14 @@ echo  the site of choice. CTRL+H is your friend.
 echo  Otherwise just select the first option
 echo ===========================================
 echo -
-echo  1) Download Video
-echo  2) Pornhub 
-echo  3) Pornhub Premium (Check README.txt)
-echo  4) Xvideo
-echo  5) PORNSITE-FOUR
-echo  6) PORNSITE-FIVE
-echo  Q) Main Menu
+echo  1)  Download Video
+echo  2)  Pornhub 
+echo  3)  Pornhub Premium (Check README.txt)
+echo  4)  Xvideo
+echo  5)  PORNSITE-FOUR
+echo  6)  PORNSITE-FIVE
+echo  Q)  Main Menu
+echo  QQ) Quit
 echo -
 echo ===========================================
 set /p prn=Pick an Option:
@@ -1553,8 +1575,9 @@ if "%prn%"=="5" goto prn5
 if "%prn%"=="6" goto prn6
 if "%prn%"=="Q" goto home1
 if "%prn%"=="q" goto home1
+if "%prn%"=="QQ" goto quit1
+if "%prn%"=="qq" goto quit1
 goto pla7
-
 
 ::  Download Video
 :prn1
@@ -1625,7 +1648,7 @@ echo   BphuDL\Downloads\Porn\Pornhub\
 echo  ====================================
 set "url=%~1"
 if not defined url set /p "url=Enter URL: "
-youtube-dl -F %url% &
+youtube-dl -F --cookies cookies\PHcookies.txt %url% &
 set "hls=%~1"
 echo =======================================================
 echo  Pick Format Code from the left column [example: 1080]
@@ -1753,14 +1776,17 @@ echo                             Save Location:
 echo                         BphuDL/Downloads/Other
 echo =========================================================================
 echo -
-echo  1) Download Video
-echo  Q) Main Menu
+echo  1)  Download Video
+echo  Q)  Main Menu
+echo  QQ) Quit
 echo -
 echo =========================================================================
 set /p othr=Pick an Option:
 if "%othr%"=="1" goto orth1
 if "%othr%"=="Q" goto home1
 if "%othr%"=="q" goto home1
+if "%othr%"=="QQ" goto quit1
+if "%othr%"=="qq" goto quit1
 goto pla8
 
 ::  Download Video
@@ -1803,11 +1829,12 @@ echo ===================
 echo  youtube-dl tags:
 echo ===================
 echo -
-echo  1) youtube-dl -F
-echo  2) youtube-dl -j
-echo  3) Add Flags
-echo  4) Empty
-echo  Q) Main Menu
+echo  1)  youtube-dl -F
+echo  2)  youtube-dl -j
+echo  3)  Add Flags
+echo  4)  Empty
+echo  Q)  Main Menu
+echo  QQ) Quit
 echo -
 echo ===================
 set /p ytf=Pick an Option:
@@ -1817,6 +1844,8 @@ if "%ytf%"=="3" goto ytf3
 if "%ytf%"=="4" goto ytf4
 if "%ytf%"=="Q" goto home1
 if "%ytf%"=="q" goto home1
+if "%ytf%"=="QQ" goto quit1
+if "%ytf%"=="qq" goto quit1
 goto pla9
 
 
@@ -1935,6 +1964,7 @@ echo  8)  Porn
 echo  9)  Other
 echo  10) BphuDL
 echo  Q)  Main Menu
+echo  QQ) Quit
 echo -
 echo ===================
 set /p dir1=Pick a Directory:
@@ -1950,6 +1980,8 @@ if "%dir1%"=="9" goto dir19
 if "%dir1%"=="10" goto dir20
 if "%dir1%"=="Q" goto home1
 if "%dir1%"=="q" goto home1
+if "%dir1%"=="QQ" goto quit1
+if "%dir1%"=="qq" goto quit1
 goto dir10
 
 :: Twitter
@@ -1979,7 +2011,7 @@ goto dir10
 
 :: Instagram
 :dir16
-start Downloads\Instagram
+start Downloads\Instagram\
 goto dir10
 
 :: Reddit
@@ -2002,8 +2034,9 @@ goto dir10
 start .
 goto dir10
 
-:exit
-@exit
+::  Quit
+:quit1
+exit
 
 
 
