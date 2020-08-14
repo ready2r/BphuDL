@@ -10,7 +10,7 @@
 :: skip7 - Porn
 :: skip8 - Other
 :: skip9 - Youtube-dl Flags
-:: skip10 - Directories
+:: dir0 - Directories
 
 :home1
 cls
@@ -119,11 +119,11 @@ echo ===========================================================
 if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
 youtube-dl -f "hls-%hls%" -o Downloads\Twitter\%%(uploader_id)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice1
 set /P tdv1=Open Download Folder [Y/N]?
 if /I "%tdv1%" EQU "Y" goto :tdv1y
 if /I "%tdv1%" EQU "N" goto :tdv1n
-goto :choice
+goto :choice1
 :tdv1y
 start Downloads\Twitter\
 goto pla1
@@ -146,11 +146,11 @@ echo ===========================================================
 if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
 youtube-dl -f "hls-%hls%" -o Downloads\Twitter\Users\TWITUSER2\%%(uploader_id)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice2
 set /P twu1=Open Download Folder [Y/N]?
 if /I "%twu1%" EQU "Y" goto :twu1y
 if /I "%twu1%" EQU "N" goto :twu1n
-goto :choice
+goto :choice2
 :twu1y
 start Downloads\Twitter\Users\TWITUSER2\
 goto pla1
@@ -173,11 +173,11 @@ echo ===========================================================
 if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
 youtube-dl -f "hls-%hls%" -o Downloads\Twitter\Users\TWITUSER3\%%(uploader_id)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice3
 set /P twu2=Open Download Folder [Y/N]?
 if /I "%twu2%" EQU "Y" goto :twu2y
 if /I "%twu2%" EQU "N" goto :twu2n
-goto :choice
+goto :choice3
 :twu2y
 start Downloads\Twitter\Users\TWITUSER3\
 goto pla1
@@ -200,11 +200,11 @@ echo ===========================================================
 if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
 youtube-dl -f "hls-%hls%" -o Downloads\Twitter\Users\TWITUSER4\%%(uploader_id)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice4
 set /P twu3=Open Download Folder [Y/N]?
 if /I "%twu3%" EQU "Y" goto :twu3y
 if /I "%twu3%" EQU "N" goto :twu3n
-goto :choice
+goto :choice4
 :twu3y
 start Downloads\Twitter\Users\TWITUSER4\
 goto pla1
@@ -227,11 +227,11 @@ echo ===========================================================
 if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
 youtube-dl -f "hls-%hls%" -o Downloads\Twitter\Users\TWITUSER5\%%(uploader_id)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice5
 set /P twu4=Open Download Folder [Y/N]?
 if /I "%twu4%" EQU "Y" goto :twu4y
 if /I "%twu4%" EQU "N" goto :twu4n
-goto :choice
+goto :choice5
 :twu4y
 start Downloads\Twitter\Users\TWITUSER5\
 goto pla1
@@ -254,11 +254,11 @@ echo ===========================================================
 if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
 youtube-dl -f "hls-%hls%" -o Downloads\Twitter\Users\TWITUSER6\%%(uploader_id)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice6
 set /P twu5=Open Download Folder [Y/N]?
 if /I "%twu5%" EQU "Y" goto :twu5y
 if /I "%twu5%" EQU "N" goto :twu5n
-goto :choice
+goto :choice6
 :twu5y
 start Downloads\Twitter\Users\TWITUSER6\
 goto pla1
@@ -333,11 +333,11 @@ if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "h
 if not defined spc set /p "spc=Special Tag? [Funny/Tits/Ass/whatever]: "
 youtube-dl -f "hls-%hls%" --audio-quality 0 -o Downloads\AfreecaTV\[%spc%]-%%(id)s-%%(resolution)s.%%(ext)s -u %user% -p %pwd% --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice7
 set /P adv1=Open Download Folder [Y/N]?
 if /I "%adv1%" EQU "Y" goto :adv1y
 if /I "%adv1%" EQU "N" goto :adv1n
-goto :choice
+goto :choice7
 :adv1y
 start Downloads\AfreecaTV\
 goto pla2
@@ -364,13 +364,13 @@ echo  Pick Format Code from the left column [example: hls-2783]
 echo ===========================================================
 if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
 if not defined spc set /p "spc=Special Tag? [Funny/Tits/Ass/whatever]: "
-youtube-dl -f "hls-%hls%" --audio-quality 0 -o Downloads\AfreecaTV\Users\ATVUSER2\[%spc%]-ATVUSER2-%%(id)s-%%(resolution)s.%%(ext)s -u %user% -p %pwd% --merge-output-format mp4 --add-metadata %url%
+youtube-dl -f "hls-%hls%" --audio-quality 0 -o Downloads\AfreecaTV\Users\ATVUSER2\[ATVUSER2-%spc%]-%%(id)s-%%(resolution)s.%%(ext)s -u %user% -p %pwd% --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice8
 set /P atv2=Open Download Folder [Y/N]?
 if /I "%atv2%" EQU "Y" goto :atv2y
 if /I "%atv2%" EQU "N" goto :atv2n
-goto :choice
+goto :choice8
 :atv2y
 start Downloads\AfreecaTV\Users\ATVUSER2\
 goto pla2
@@ -397,13 +397,13 @@ echo  Pick Format Code from the left column [example: hls-2783]
 echo ===========================================================
 if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
 if not defined spc set /p "spc=Special Tag? [Funny/Tits/Ass/whatever]: "
-youtube-dl -f "hls-%hls%" --audio-quality 0 -o Downloads\AfreecaTV\Users\ATVUSER3\[%spc%]-ATVUSER3-%%(id)s-%%(resolution)s.%%(ext)s -u %user% -p %pwd% --merge-output-format mp4 --add-metadata %url%
+youtube-dl -f "hls-%hls%" --audio-quality 0 -o Downloads\AfreecaTV\Users\ATVUSER3\[ATVUSER3-%spc%]-%%(id)s-%%(resolution)s.%%(ext)s -u %user% -p %pwd% --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice9
 set /P atv3=Open Download Folder [Y/N]?
 if /I "%atv3%" EQU "Y" goto :atv3y
 if /I "%atv3%" EQU "N" goto :atv3n
-goto :choice
+goto :choice9
 :atv3y
 start Downloads\AfreecaTV\Users\ATVUSER3\
 goto pla2
@@ -430,13 +430,13 @@ echo  Pick Format Code from the left column [example: hls-2783]
 echo ===========================================================
 if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
 if not defined spc set /p "spc=Special Tag? [Funny/Tits/Ass/whatever]: "
-youtube-dl -f "hls-%hls%" --audio-quality 0 -o Downloads\AfreecaTV\Users\ATVUSER4\[%spc%]-ATVUSER4-%%(id)s-%%(resolution)s.%%(ext)s -u %user% -p %pwd% --merge-output-format mp4 --add-metadata %url%
+youtube-dl -f "hls-%hls%" --audio-quality 0 -o Downloads\AfreecaTV\Users\ATVUSER4\[ATVUSER4-%spc%]-%%(id)s-%%(resolution)s.%%(ext)s -u %user% -p %pwd% --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice10
 set /P atv4=Open Download Folder [Y/N]?
 if /I "%atv4%" EQU "Y" goto :atv4y
 if /I "%atv4%" EQU "N" goto :atv4n
-goto :choice
+goto :choice10
 :atv4y
 start Downloads\AfreecaTV\Users\ATVUSER4\
 goto pla2
@@ -463,13 +463,13 @@ echo  Pick Format Code from the left column [example: hls-2783]
 echo ===========================================================
 if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
 if not defined spc set /p "spc=Special Tag? [Funny/Tits/Ass/whatever]: "
-youtube-dl -f "hls-%hls%" --audio-quality 0 -o Downloads\AfreecaTV\Users\ATVUSER5\[%spc%]ATVUSER5-%%(id)s-%%(resolution)s.%%(ext)s -u %user% -p %pwd% --merge-output-format mp4 --add-metadata %url%
+youtube-dl -f "hls-%hls%" --audio-quality 0 -o Downloads\AfreecaTV\Users\ATVUSER5\[ATVUSER5-%spc%]-%%(id)s-%%(resolution)s.%%(ext)s -u %user% -p %pwd% --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice11
 set /P atv5=Open Download Folder [Y/N]?
 if /I "%atv5%" EQU "Y" goto :atv5y
 if /I "%atv5%" EQU "N" goto :atv5n
-goto :choice
+goto :choice11
 :atv5y
 start Downloads\AfreecaTV\Users\ATVUSER5\
 goto pla2
@@ -496,13 +496,13 @@ echo  Pick Format Code from the left column [example: hls-2783]
 echo ===========================================================
 if not defined hls set /p "hls=Enter HLS Code [only the number, dont need the "hls-"]: "
 if not defined spc set /p "spc=Special Tag? [Funny/Tits/Ass/whatever]: "
-youtube-dl -f "hls-%hls%" --audio-quality 0 -o Downloads\AfreecaTV\Users\ATVUSER6\[%spc%]ATVUSER6-%%(id)s-%%(resolution)s.%%(ext)s -u %user% -p %pwd% --merge-output-format mp4 --add-metadata %url%
+youtube-dl -f "hls-%hls%" --audio-quality 0 -o Downloads\AfreecaTV\Users\ATVUSER6\[ATVUSER6-%spc%]-%%(id)s-%%(resolution)s.%%(ext)s -u %user% -p %pwd% --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice12
 set /P atv6=Open Download Folder [Y/N]?
 if /I "%atv6%" EQU "Y" goto :atv6y
 if /I "%atv6%" EQU "N" goto :atv6n
-goto :choice
+goto :choice12
 :atv6y
 start Downloads\AfreecaTV\Users\ATVUSER6\
 goto pla2
@@ -610,11 +610,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --no-playlist -f "bestvideo[height<=720]+bestaudio[ext=m4a]" -o Downloads\YT\720p\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice13
 set /P av720=Open Download Folder [Y/N]?
 if /I "%av720%" EQU "Y" goto :av720y
 if /I "%av720%" EQU "N" goto :av720n
-goto :choice
+goto :choice13
 :av720y
 start Downloads\YT\720p\
 goto pla3a
@@ -633,11 +633,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --no-playlist -f "bestvideo[height<=1080]+bestaudio[ext=m4a]" -o Downloads\YT\1080p\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice14
 set /P av1080=Open Download Folder [Y/N]?
 if /I "%av1080%" EQU "Y" goto :av1080y
 if /I "%av1080%" EQU "N" goto :av1080n
-goto :choice
+goto :choice14
 :av1080y
 start Downloads\YT\1080p\
 goto pla3a
@@ -656,11 +656,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --no-playlist -f bestvideo+bestaudio -o Downloads\YT\HR\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mkv --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice15
 set /P abvhr=Open Download Folder [Y/N]?
 if /I "%abvhr%" EQU "Y" goto :abvhry
 if /I "%abvhr%" EQU "N" goto :abvhrn
-goto :choice
+goto :choice15
 :abvhry
 start Downloads\YT\HR\
 goto pla3a
@@ -679,11 +679,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --yes-playlist -f "bestvideo[height<=720]+bestaudio[ext=m4a]" -o Downloads\YT\720p\%%(playlist)s/%%(playlist_index)s-%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url% &
 TIMEOUT 1
-:choice
+:choice16
 set /P abvp720=Open Download Folder [Y/N]?
 if /I "%abvp720%" EQU "Y" goto :abvp720y
 if /I "%abvp720%" EQU "N" goto :abvp720n
-goto :choice
+goto :choice16
 :abvp720y
 start Downloads\YT\720p\
 goto pla3a
@@ -702,11 +702,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --yes-playlist -f "bestvideo[height<=1080]+bestaudio[ext=m4a]" -o Downloads\YT\1080p\%%(playlist)s/%%(playlist_index)s-%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice17
 set /P abvp1080=Open Download Folder [Y/N]?
 if /I "%abvp1080%" EQU "Y" goto :abvp1080y
 if /I "%abvp1080%" EQU "N" goto :abvp1080n
-goto :choice
+goto :choice17
 :abvp1080y
 start Downloads\YT\1080p\
 goto pla3a
@@ -725,11 +725,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --yes-playlist -f bestvideo+bestaudio -o Downloads\YT\HR\%%(playlist)s/%%(playlist_index)s-%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mkv --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice18
 set /P avphr=Open Download Folder [Y/N]?
 if /I "%avphr%" EQU "Y" goto :avphry
 if /I "%avphr%" EQU "N" goto :avphrn
-goto :choice
+goto :choice18
 :avphry
 start Downloads\YT\HR\
 goto pla3a
@@ -748,11 +748,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --no-playlist -f "bestvideo[height<=720]+bestaudio[ext=m4a]" -o Downloads\YTMusic\720p\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url% &
 TIMEOUT 1
-:choice
+:choice19
 set /P am720=Open Download Folder [Y/N]?
 if /I "%am720%" EQU "Y" goto :am720y
 if /I "%am720%" EQU "N" goto :am720n
-goto :choice
+goto :choice19
 :am720y
 start Downloads\YTMusic\720p\
 goto pla3a
@@ -771,11 +771,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --no-playlist -f "bestvideo[height<=1080]+bestaudio[ext=m4a]" -o Downloads\YTMusic\1080p\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice20
 set /P am1080=Open Download Folder [Y/N]?
 if /I "%am1080%" EQU "Y" goto :am1080y
 if /I "%am1080%" EQU "N" goto :am1080n
-goto :choice
+goto :choice20
 :am1080y
 start Downloads\YTMusic\1080p\
 goto pla3a
@@ -794,11 +794,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --no-playlist -f bestvideo+bestaudio -o Downloads\YTMusic\HR\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mkv --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice21
 set /P mhr=Open Download Folder [Y/N]?
 if /I "%amhr%" EQU "Y" goto :amhry
 if /I "%amhr%" EQU "N" goto :amhrn
-goto :choice
+goto :choice21
 :amhry
 start Downloads\YTMusic\HR\
 goto pla3a
@@ -817,11 +817,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --yes-playlist -f "bestvideo[height<=720]+bestaudio[ext=m4a]" -o Downloads\YTMusic\720p\%%(playlist)s/%%(playlist_index)s-%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url% &
 TIMEOUT 1
-:choice
+:choice22
 set /P amp720=Open Download Folder [Y/N]?
 if /I "%amp720%" EQU "Y" goto :amp720y
 if /I "%amp720%" EQU "N" goto :amp720n
-goto :choice
+goto :choice22
 :amp720y
 start Downloads\YTMusic\720p\
 goto pla3a
@@ -840,11 +840,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --yes-playlist -f "bestvideo[height<=1080]+bestaudio[ext=m4a]" -o Downloads\YTMusic\1080p\%%(playlist)s/%%(playlist_index)s-%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice23
 set /P amp1080=Open Download Folder [Y/N]?
 if /I "%amp1080%" EQU "Y" goto :amp1080y
 if /I "%amp1080%" EQU "N" goto :amp1080n
-goto :choice
+goto :choice23
 :amp1080y
 start Downloads\YTMusic\1080p\
 goto pla3
@@ -863,11 +863,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --yes-playlist -f bestvideo+bestaudio -o Downloads\YTMusic\HR\%%(playlist)s/%%(playlist_index)s-%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mkv --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice24
 set /P amphr=Open Download Folder [Y/N]?
 if /I "%amphr%" EQU "Y" goto :amphry
 if /I "%amphr%" EQU "N" goto :amphrn
-goto :choice
+goto :choice24
 :amphry
 start Downloads\YTMusic\HR\
 goto pla3a
@@ -886,11 +886,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --no-playlist -o Downloads\YTMusic\AudioOnly\%%(title)s.%%(ext)s -x --audio-format mp3 --audio-quality 0 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice25
 set /P amao=Open Download Folder [Y/N]?
 if /I "%amao%" EQU "Y" goto :amaoy
 if /I "%amao%" EQU "N" goto :amaon
-goto :choice
+goto :choice25
 :amaoy
 start Downloads\YTMusic\AudioOnly\
 goto pla3a
@@ -909,11 +909,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --yes-playlist -o Downloads\YTMusic\AudioOnly\%%(playlist)s/%%(playlist_index)s-%%(title)s.%%(ext)s -x --audio-format mp3 --audio-quality 0 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice26
 set /P ampao=Open Download Folder [Y/N]?
 if /I "%ampao%" EQU "Y" goto :ampaoy
 if /I "%ampao%" EQU "N" goto :ampaon
-goto :choice
+goto :choice26
 :ampaoy
 start Downloads\YTMusic\AudioOnly\
 goto pla3a
@@ -930,11 +930,11 @@ echo   BphuDL\Downloads\YTMusic\AudioOnly\
 echo  =====================================
 youtube-dl --no-playlist -o Downloads\YTMusic\AudioOnly\%%(title)s.%%(ext)s -x --audio-format mp3 --audio-quality 0 --add-metadata -a AudioOnlyDownloadList.txt 
 TIMEOUT 1
-:choice
+:choice27
 set /P amaot=Open Download Folder [Y/N]?
 if /I "%amaot%" EQU "Y" goto :amaoty
 if /I "%amaot%" EQU "N" goto :amaotn
-goto :choice
+goto :choice27
 :amaoty
 start Downloads\YTMusic\AudioOnly\
 goto pla3a
@@ -1012,11 +1012,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --no-playlist --cookies cookies\YTcookies.txt -f "bestvideo[height<=720]+bestaudio[ext=m4a]" -o Downloads\YT\720p\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice28
 set /P bv720=Open Download Folder [Y/N]?
 if /I "%bv720%" EQU "Y" goto :bv720y
 if /I "%bv720%" EQU "N" goto :bv720n
-goto :choice
+goto :choice28
 :bv720y
 start Downloads\YT\720p\
 goto pla3b
@@ -1035,11 +1035,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --no-playlist --cookies YTcookies.txt -f "bestvideo[height<=1080]+bestaudio[ext=m4a]" -o Downloads\YT\1080p\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice29
 set /P bv1080=Open Download Folder [Y/N]?
 if /I "%bv1080%" EQU "Y" goto :bv1080y
 if /I "%bv1080%" EQU "N" goto :bv1080n
-goto :choice
+goto :choice29
 :bv1080y
 start Downloads\YT\1080p\
 goto pla3b
@@ -1058,11 +1058,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --no-playlist --cookies YTcookies.txt -f bestvideo+bestaudio -o Downloads\YT\HR\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mkv --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice30
 set /P bvhr=Open Download Folder [Y/N]?
 if /I "%bvhr%" EQU "Y" goto :bvhry
 if /I "%bvhr%" EQU "N" goto :bvhrn
-goto :choice
+goto :choice30
 :bvhry
 start Downloads\YT\HR\
 goto pla3b
@@ -1081,11 +1081,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --yes-playlist --cookies YTcookies.txt -f "bestvideo[height<=720]+bestaudio[ext=m4a]" -o Downloads\YT\720p\%%(playlist)s/%%(playlist_index)s-%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url% &
 TIMEOUT 1
-:choice
+:choice31
 set /P bvp720=Open Download Folder [Y/N]?
 if /I "%bvp720%" EQU "Y" goto :bvp720y
 if /I "%bvp720%" EQU "N" goto :bvp720n
-goto :choice
+goto :choice31
 :bvp720y
 start Downloads\YT\720p\
 goto pla3b
@@ -1104,11 +1104,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --yes-playlist --cookies YTcookies.txt -f "bestvideo[height<=1080]+bestaudio[ext=m4a]" -o Downloads\YT\1080p\%%(playlist)s/%%(playlist_index)s-%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice32
 set /P bvp1080=Open Download Folder [Y/N]?
 if /I "%bvp1080%" EQU "Y" goto :bvp1080y
 if /I "%bvp1080%" EQU "N" goto :bvp1080n
-goto :choice
+goto :choice32
 :bvp1080y
 start Downloads\YT\1080p\
 goto pla3b
@@ -1127,11 +1127,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --yes-playlist --cookies YTcookies.txt -f bestvideo+bestaudio -o Downloads\YT\HR\%%(playlist)s/%%(playlist_index)s-%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mkv --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice33
 set /P bvphr=Open Download Folder [Y/N]?
 if /I "%bvphr%" EQU "Y" goto :bvphry
 if /I "%bvphr%" EQU "N" goto :bvphrn
-goto :choice
+goto :choice33
 :bvphry
 start Downloads\YT\HR\
 goto pla3b
@@ -1150,11 +1150,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --no-playlist --cookies YTcookies.txt -f "bestvideo[height<=720]+bestaudio[ext=m4a]" -o Downloads\YTMusic\720p\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url% &
 TIMEOUT 1
-:choice
+:choice34
 set /P bm720=Open Download Folder [Y/N]?
 if /I "%bm720%" EQU "Y" goto :bm720y
 if /I "%bm720%" EQU "N" goto :bm720n
-goto :choice
+goto :choice34
 :bm720y
 start Downloads\YTMusic\720p\
 goto pla3b
@@ -1173,11 +1173,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --no-playlist --cookies YTcookies.txt -f "bestvideo[height<=1080]+bestaudio[ext=m4a]" -o Downloads\YTMusic\1080p\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice35
 set /P bm1080=Open Download Folder [Y/N]?
 if /I "%bm1080%" EQU "Y" goto :bm1080y
 if /I "%bm1080%" EQU "N" goto :bm1080n
-goto :choice
+goto :choice35
 :bm1080y
 start Downloads\YTMusic\1080p\
 goto pla3b
@@ -1196,11 +1196,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --no-playlist --cookies YTcookies.txt -f bestvideo+bestaudio -o Downloads\YTMusic\HR\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mkv --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice36
 set /P bmhr=Open Download Folder [Y/N]?
 if /I "%bmhr%" EQU "Y" goto :bmhry
 if /I "%bmhr%" EQU "N" goto :bmhrn
-goto :choice
+goto :choice36
 :bmhry
 start Downloads\YTMusic\HR\
 goto pla3b
@@ -1219,11 +1219,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --yes-playlist --cookies YTcookies.txt -f "bestvideo[height<=720]+bestaudio[ext=m4a]" -o Downloads\YTMusic\720p\%%(playlist)s/%%(playlist_index)s-%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url% &
 TIMEOUT 1
-:choice
+:choice37
 set /P bmp720=Open Download Folder [Y/N]?
 if /I "%bmp720%" EQU "Y" goto :bmp720y
 if /I "%bmp720%" EQU "N" goto :bmp720n
-goto :choice
+goto :choice37
 :bmp720y
 start Downloads\YTMusic\720p\
 goto pla3b
@@ -1242,11 +1242,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --yes-playlist --cookies YTcookies.txt -f "bestvideo[height<=1080]+bestaudio[ext=m4a]" -o Downloads\YTMusic\1080p\%%(playlist)s/%%(playlist_index)s-%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice38
 set /P bmp1080=Open Download Folder [Y/N]?
 if /I "%bmp1080%" EQU "Y" goto :bmp1080y
 if /I "%bmp1080%" EQU "N" goto :bmp1080n
-goto :choice
+goto :choice38
 :bmp1080y
 start Downloads\YTMusic\1080p\
 goto pla3b
@@ -1265,11 +1265,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --yes-playlist --cookies YTcookies.txt -f bestvideo+bestaudio -o Downloads\YTMusic\HR\%%(playlist)s/%%(playlist_index)s-%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mkv --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice39
 set /P bmphr=Open Download Folder [Y/N]?
 if /I "%bmphr%" EQU "Y" goto :bmphry
 if /I "%bmphr%" EQU "N" goto :bmphrn
-goto :choice
+goto :choice39
 :bmphry
 start Downloads\YTMusic\HR\
 goto pla3b
@@ -1288,11 +1288,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --no-playlist --cookies YTcookies.txt -o Downloads\YTMusic\AudioOnly\%%(title)s.%%(ext)s -x --audio-format mp3 --audio-quality 0 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice40
 set /P bmao=Open Download Folder [Y/N]?
 if /I "%bmao%" EQU "Y" goto :bmaoy
 if /I "%bmao%" EQU "N" goto :bmaon
-goto :choice
+goto :choice40
 :bmaoy
 start Downloads\YTMusic\AudioOnly\
 goto pla3b
@@ -1311,11 +1311,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl --yes-playlist --cookies YTcookies.txt -o Downloads\YTMusic\AudioOnly\%%(playlist)s/%%(playlist_index)s-%%(title)s.%%(ext)s -x --audio-format mp3 --audio-quality 0 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice41
 set /P bmpao=Open Download Folder [Y/N]?
 if /I "%bmpao%" EQU "Y" goto :bmpaoy
 if /I "%bmpao%" EQU "N" goto :bmpaon
-goto :choice
+goto :choice41
 :bmpaoy
 start Downloads\YTMusic\AudioOnly\
 goto pla3b
@@ -1332,11 +1332,11 @@ echo   BphuDL\Downloads\YTMusic\AudioOnly\
 echo  =====================================
 youtube-dl --no-playlist --cookies YTcookies.txt -o Downloads\YTMusic\AudioOnly\%%(title)s.%%(ext)s -x --audio-format mp3 --audio-quality 0 --add-metadata -a AudioOnlyDownloadList.txt 
 TIMEOUT 1
-:choice
+:choice42
 set /P bmaot=Open Download Folder [Y/N]?
 if /I "%bmaot%" EQU "Y" goto :bmaoty
 if /I "%bmaot%" EQU "N" goto :bmaotn
-goto :choice
+goto :choice42
 :bmaoty
 start Downloads\YTMusic\AudioOnly\
 goto pla3b
@@ -1361,8 +1361,13 @@ echo  Play or Save
 echo ======================================
 echo - 
 echo  1)  Save Clip
-echo  2)  Save a Stream While They are Live
-echo  3)  Play a Live Stream in CMD
+echo  2)  TWITCHUSER2
+echo  3)  TWITCHUSER3
+echo  4)  TWITCHUSER4
+echo  5)  TWITCHUSER5
+echo  6)  TWITCHUSER6
+echo  7)  Save a Stream While They are Live
+echo  8)  Play a Live Stream in CMD
 echo  Q)  Main Menu
 echo  QQ) Quit
 echo -
@@ -1371,6 +1376,11 @@ set /p tlv=Pick an Option:
 if "%tlv%"=="1" goto tlv1
 if "%tlv%"=="2" goto tlv2
 if "%tlv%"=="3" goto tlv3
+if "%tlv%"=="4" goto tlv4
+if "%tlv%"=="5" goto tlv5
+if "%tlv%"=="6" goto tlv6
+if "%tlv%"=="7" goto tlv7
+if "%tlv%"=="8" goto tlv8
 if "%tlv%"=="Q" goto home1
 if "%tlv%"=="q" goto home1
 if "%tlv%"=="QQ" goto quit1
@@ -1385,7 +1395,7 @@ echo  Save Clip
 echo ===========
 set "url=%~1"
 if not defined url set /p "url=Enter URL: "
-youtube-dl -F %url% &
+youtube-dl -F %url% 
 set "hls=%~1"
 set "spc=%~1"
 echo =======================================================
@@ -1393,21 +1403,166 @@ echo  Pick Format Code from the left column [example: 1080]
 echo =======================================================
 if not defined hls set /p "hls=Type the Format Code from the left column for the Quality that you want: "
 if not defined spc set /p "spc=Special Tag? [Funny/Tits/Ass/whatever]: "
-youtube-dl -f "%hls%" -o Downloads\Twitch\Clips\[%%(creator)s-%spc%]-%%(title)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+youtube-dl -f "%hls%" -o Downloads\Twitch\[%%(creator)s-%spc%]-%%(title)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice43
 set /P tc1=Open Download Folder [Y/N]?
 if /I "%tc1%" EQU "Y" goto :tc1y
 if /I "%tc1%" EQU "N" goto :tc1n
-goto :choice
+goto :choice43
 :tc1y
-start Downloads\Twitch\Clips\
+start Downloads\Twitch\
 goto pla4
 :tc1n
 goto pla4
 
-::  Live Stream Save
+:: TWITCHUSER2
 :tlv2
+cls
+echo =============
+echo  TWITCHUSER2
+echo =============
+set "url=%~1"
+if not defined url set /p "url=Enter URL: "
+youtube-dl -F %url% 
+set "hls=%~1"
+set "spc=%~1"
+echo =====================================================
+echo  Pick Format Code from the left side [example: 1080]
+echo =====================================================
+if not defined hls set /p "hls=Type the Format Code from the left column for the Quality that you want: "
+if not defined spc set /p "spc=Special?: "
+youtube-dl -f "%hls%" -o Downloads\Twitch\Users\TWITCHUSER2\[%spc%]-TWITCHUSER2-%%(title)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+TIMEOUT 1
+:choice44
+set /P tc2=Open Download Folder [Y/N]?
+if /I "%tc2%" EQU "Y" goto :tc2y
+if /I "%tc2%" EQU "N" goto :tc2n
+goto :choice44
+:tc2y
+start Downloads\Twitch\Users\TWITCHUSER2\
+goto pla4
+:tc2n
+goto pla4
+
+:: TWITCHUSER3
+:tlv3
+cls
+echo =============
+echo  TWITCHUSER3
+echo =============
+set "url=%~1"
+if not defined url set /p "url=Enter URL: "
+youtube-dl -F %url% 
+set "hls=%~1"
+set "spc=%~1"
+echo =====================================================
+echo  Pick Format Code from the left side [example: 1080]
+echo =====================================================
+if not defined hls set /p "hls=Type the Format Code from the left column for the Quality that you want: "
+if not defined spc set /p "spc=Special?: "
+youtube-dl -f "%hls%" -o Downloads\Twitch\Users\TWITCHUSER3\[%spc%]-TWITCHUSER3-%%(title)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+TIMEOUT 1
+:choice45
+set /P tc3=Open Download Folder [Y/N]?
+if /I "%tc3%" EQU "Y" goto :tc3y
+if /I "%tc3%" EQU "N" goto :tc3n
+goto :choice45
+:tc3y
+start Downloads\Twitch\Users\TWITCHUSER3\
+goto pla4
+:tc3n
+goto pla4
+
+:: TWITCHUSER4
+:tlv4
+cls
+echo =============
+echo  TWITCHUSER4
+echo =============
+set "url=%~1"
+if not defined url set /p "url=Enter URL: "
+youtube-dl -F %url% 
+set "hls=%~1"
+set "spc=%~1"
+echo =====================================================
+echo  Pick Format Code from the left side [example: 1080]
+echo =====================================================
+if not defined hls set /p "hls=Type the Format Code from the left column for the Quality that you want: "
+if not defined spc set /p "spc=Special?: "
+youtube-dl -f "%hls%" -o Downloads\Twitch\Users\TWITCHUSER4\[%spc%]-TWITCHUSER4-%%(title)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+TIMEOUT 1
+:choice46
+set /P tc4=Open Download Folder [Y/N]?
+if /I "%tc4%" EQU "Y" goto :tc4y
+if /I "%tc4%" EQU "N" goto :tc4n
+goto :choice46
+:tc4y
+start Downloads\Twitch\Users\TWITCHUSER4\
+goto pla4
+:tc4n
+goto pla4
+
+:: TWITCHUSER5
+:tlv5
+cls
+echo =============
+echo  TWITCHUSER5
+echo =============
+set "url=%~1"
+if not defined url set /p "url=Enter URL: "
+youtube-dl -F %url% 
+set "hls=%~1"
+set "spc=%~1"
+echo =====================================================
+echo  Pick Format Code from the left side [example: 1080]
+echo =====================================================
+if not defined hls set /p "hls=Type the Format Code from the left column for the Quality that you want: "
+if not defined spc set /p "spc=Special?: "
+youtube-dl -f "%hls%" -o Downloads\Twitch\Users\TWITCHUSER5\[%spc%]-TWITCHUSER5-%%(title)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+TIMEOUT 1
+:choice47
+set /P tc5=Open Download Folder [Y/N]?
+if /I "%tc5%" EQU "Y" goto :tc5y
+if /I "%tc5%" EQU "N" goto :tc5n
+goto :choice47
+:tc5y
+start Downloads\Twitch\Users\TWITCHUSER5\
+goto pla4
+:tc5n
+goto pla4
+
+:: TWITCHUSER6
+:tlv6
+cls
+echo =============
+echo  TWITCHUSER6
+echo =============
+set "url=%~1"
+if not defined url set /p "url=Enter URL: "
+youtube-dl -F %url% 
+set "hls=%~1"
+set "spc=%~1"
+echo =====================================================
+echo  Pick Format Code from the left side [example: 1080]
+echo =====================================================
+if not defined hls set /p "hls=Type the Format Code from the left column for the Quality that you want: "
+if not defined spc set /p "spc=Special?: "
+youtube-dl -f "%hls%" -o Downloads\Twitch\Users\TWITCHUSER6\[%spc%]-TWITCHUSER6-%%(title)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+TIMEOUT 1
+:choice48
+set /P tc6=Open Download Folder [Y/N]?
+if /I "%tc6%" EQU "Y" goto :tc6y
+if /I "%tc6%" EQU "N" goto :tc6n
+goto :choice48
+:tc6y
+start Downloads\Twitch\Users\TWITCHUSER6\
+goto pla4
+:tc6n
+goto pla4
+
+::  Live Stream Save
+:tlv7
 cls
 echo ===============================================================================================================
 echo  Live Stream Save
@@ -1422,7 +1577,7 @@ ffmpeg -i "%url%" -vcodec copy -acodec copy Downloads\Twitch\LiveStreams\%name%.
 pause
 
 ::  Live Stream Play
-:tlv3
+:tlv8
 cls
 echo ===============================================================================================================
 echo  Live Stream Play
@@ -1454,12 +1609,22 @@ echo           BphuDL/Downloads/Instagram
 echo ================================================
 echo -
 echo  1)  Download Video
+echo  2)  INSTAUSER2
+echo  3)  INSTAUSER3
+echo  4)  INSTAUSER4
+echo  5)  INSTAUSER5
+echo  6)  INSTAUSER6
 echo  Q)  Main Menu
 echo  QQ) Quit
 echo -
 echo ================================================
 set /p inst=Pick an Option:
 if "%inst%"=="1" goto inst1
+if "%inst%"=="2" goto inst2
+if "%inst%"=="3" goto inst3
+if "%inst%"=="4" goto inst4
+if "%inst%"=="5" goto inst5
+if "%inst%"=="5" goto inst6
 if "%inst%"=="Q" goto home1
 if "%inst%"=="q" goto home1
 if "%inst%"=="QQ" goto quit1
@@ -1468,19 +1633,128 @@ goto pla5
 
 ::  Instagram
 :inst1
+cls
+echo  ===========
+echo   Instagram
+echo  ===========
 set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl -o Downloads\Instagram\%%(uploader_id)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
-set /P oth1=Open Download Folder [Y/N]?
-if /I "%oth1%" EQU "Y" goto :oth1y
-if /I "%oth1%" EQU "N" goto :oth1n
-goto :choice
-:oth1y
+:choice49
+set /P ins1=Open Download Folder [Y/N]?
+if /I "%ins1%" EQU "Y" goto :ins1y
+if /I "%ins1%" EQU "N" goto :ins1n
+goto :choice49
+:ins1y
 start Downloads\Instagram\
 goto pla5
-:oth1n
+:ins1n
+goto pla5
+
+::  INSTAUSER2
+:inst2
+cls
+echo  ============
+echo   INSTAUSER2
+echo  ============
+set "url=%~1"
+if not defined url set /p "url=Enter URL: "
+youtube-dl -o Downloads\Instagram\Users\INSTAUSER2\%%(uploader_id)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+TIMEOUT 1
+:choice50
+set /P ins2=Open Download Folder [Y/N]?
+if /I "%ins2%" EQU "Y" goto :ins2y
+if /I "%ins2%" EQU "N" goto :ins2n
+goto :choice50
+:ins2y
+start Downloads\Instagram\Users\INSTAUSER2\
+goto pla5
+:ins2n
+goto pla5
+
+::  INSTAUSER3
+:inst2
+cls
+echo  ============
+echo   INSTAUSER3
+echo  ============
+set "url=%~1"
+if not defined url set /p "url=Enter URL: "
+youtube-dl -o Downloads\Instagram\Users\INSTAUSER3\%%(uploader_id)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+TIMEOUT 1
+:choice51
+set /P ins3=Open Download Folder [Y/N]?
+if /I "%ins3%" EQU "Y" goto :ins3y
+if /I "%ins3%" EQU "N" goto :ins3n
+goto :choice51
+:ins3y
+start Downloads\Instagram\Users\INSTAUSER3\
+goto pla5
+:ins3n
+goto pla5
+
+::  INSTAUSER4
+:inst4
+cls
+echo  ============
+echo   INSTAUSER4
+echo  ============
+set "url=%~1"
+if not defined url set /p "url=Enter URL: "
+youtube-dl -o Downloads\Instagram\Users\INSTAUSER4\%%(uploader_id)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+TIMEOUT 1
+:choice52
+set /P ins4=Open Download Folder [Y/N]?
+if /I "%ins4%" EQU "Y" goto :ins4y
+if /I "%ins4%" EQU "N" goto :ins4n
+goto :choice52
+:ins4y
+start Downloads\Instagram\Users\INSTAUSER4\
+goto pla5
+:ins4n
+goto pla5
+
+::  INSTAUSER5
+:inst5
+cls
+echo  ============
+echo   INSTAUSER5
+echo  ============
+set "url=%~1"
+if not defined url set /p "url=Enter URL: "
+youtube-dl -o Downloads\Instagram\Users\INSTAUSER5\%%(uploader_id)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+TIMEOUT 1
+:choice53
+set /P ins5=Open Download Folder [Y/N]?
+if /I "%ins5%" EQU "Y" goto :ins5y
+if /I "%ins5%" EQU "N" goto :ins5n
+goto :choice53
+:ins5y
+start Downloads\Instagram\Users\INSTAUSER5\
+goto pla5
+:ins5n
+goto pla5
+
+::  INSTAUSER6
+:inst6
+cls
+echo  ============
+echo   INSTAUSER6
+echo  ============
+set "url=%~1"
+if not defined url set /p "url=Enter URL: "
+youtube-dl -o Downloads\Instagram\Users\INSTAUSER6\%%(uploader_id)s-%%(id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
+TIMEOUT 1
+:choice54
+set /P ins6=Open Download Folder [Y/N]?
+if /I "%ins6%" EQU "Y" goto :ins6y
+if /I "%ins6%" EQU "N" goto :ins6n
+goto :choice54
+:ins6y
+start Downloads\Instagram\Users\INSTAUSER6\
+goto pla5
+:ins6n
 goto pla5
 
 :exit
@@ -1522,11 +1796,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl -o Downloads\Reddit\[%%(uploader)s]-%%(title)s--%%(display_id)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice55
 set /P red1=Open Download Folder [Y/N]?
 if /I "%red1%" EQU "Y" goto :red1y
 if /I "%red1%" EQU "N" goto :red1n
-goto :choice
+goto :choice55
 :red1y
 start Downloads\Reddit\
 goto pla6
@@ -1597,11 +1871,11 @@ echo =======================================================
 if not defined hls set /p "hls=Type the Format Code from the left column for the Quality that you want: "
 youtube-dl -f "%hls%" -o Downloads\Porn\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice56
 set /P pdv1=Open Download Folder [Y/N]?
 if /I "%pdv1%" EQU "Y" goto :pdv1y
 if /I "%pdv1%" EQU "N" goto :pdv1n
-goto :choice
+goto :choice56
 :pdv1y
 start Downloads\Porn\
 goto pla7
@@ -1626,11 +1900,11 @@ echo =======================================================
 if not defined hls set /p "hls=Type the Format Code from the left column for the Quality that you want: "
 youtube-dl -f "%hls%" -o Downloads\Porn\Pornhub\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice57
 set /P ph1=Open Download Folder [Y/N]?
 if /I "%ph1%" EQU "Y" goto :ph1y
 if /I "%ph1%" EQU "N" goto :ph1n
-goto :choice
+goto :choice57
 :ph1y
 start Downloads\Porn\Pornhub\
 goto pla7
@@ -1656,11 +1930,11 @@ echo =======================================================
 if not defined hls set /p "hls=Type the Format Code from the left column for the Quality that you want: "
 youtube-dl -f "%hls%" --cookies cookies\PHcookies.txt -o Downloads\Porn\Pornhub\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice58
 set /P php1=Open Download Folder [Y/N]?
 if /I "%php1%" EQU "Y" goto :php1y
 if /I "%php1%" EQU "N" goto :php1n
-goto :choice
+goto :choice58
 :php1y
 start Downloads\Porn\Pornhub\
 goto pla7
@@ -1685,11 +1959,11 @@ echo =======================================================
 if not defined hls set /p "hls=Type the Format Code from the left column for the Quality that you want: "
 youtube-dl -f "%hls%" -o Downloads\Porn\Xvideo\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice59
 set /P xv1=Open Download Folder [Y/N]?
 if /I "%xv1%" EQU "Y" goto :xv1y
 if /I "%xv1%" EQU "N" goto :xv1n
-goto :choice
+goto :choice59
 :xv1y
 start Downloads\Porn\Xvideo\
 goto pla7
@@ -1714,11 +1988,11 @@ echo =======================================================
 if not defined hls set /p "hls=Type the Format Code from the left column for the Quality that you want: "
 youtube-dl -f "%hls%" -o Downloads\Porn\PORNSITE-FOUR\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice60
 set /P ps4=Open Download Folder [Y/N]?
 if /I "%ps4%" EQU "Y" goto :ps4y
 if /I "%ps4%" EQU "N" goto :ps4n
-goto :choice
+goto :choice60
 :ps4y
 start Downloads\Porn\PORNSITE-FOUR\
 goto pla7
@@ -1746,11 +2020,11 @@ echo =======================================================
 if not defined hls set /p "hls=Type the Format Code from the left column for the Quality that you want: "
 youtube-dl -f "%hls%" -o Downloads\Porn\PORNSITE-FIVE\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice61
 set /P ps5=Open Download Folder [Y/N]?
 if /I "%ps5%" EQU "Y" goto :ps5y
 if /I "%ps5%" EQU "N" goto :ps5n
-goto :choice
+goto :choice61
 :ps5y
 start Downloads\Porn\PORNSITE-FIVE\
 goto pla7
@@ -1782,7 +2056,7 @@ echo  QQ) Quit
 echo -
 echo =========================================================================
 set /p othr=Pick an Option:
-if "%othr%"=="1" goto orth1
+if "%othr%"=="1" goto othr1
 if "%othr%"=="Q" goto home1
 if "%othr%"=="q" goto home1
 if "%othr%"=="QQ" goto quit1
@@ -1801,11 +2075,11 @@ echo =======================================================
 if not defined hls set /p "hls=Type the Format Code from the left column for the Quality that you want: "
 youtube-dl -f "%hls%" -o Downloads\Other\%%(title)s-%%(resolution)s.%%(ext)s --merge-output-format mp4 --add-metadata %url%
 TIMEOUT 1
-:choice
+:choice62
 set /P oth1=Open Download Folder [Y/N]?
 if /I "%oth1%" EQU "Y" goto :oth1y
 if /I "%oth1%" EQU "N" goto :oth1n
-goto :choice
+goto :choice62
 :oth1y
 start Downloads\Other\
 goto pla8
@@ -1856,11 +2130,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl -F %url%
 TIMEOUT 1
-:choice
+:choice63
 set /P ytfh1=Return Home? [Y/N]?
 if /I "%ytfh1%" EQU "Y" goto :ytfh1y
 if /I "%ytfh1%" EQU "N" goto :ytfh1n
-goto :choice
+goto :choice63
 :ytfh1y
 goto pla9
 :ytfh1n
@@ -1869,37 +2143,38 @@ exit
 ::  Youtube-dl -j
 :ytf2
 :: Save JSON?
-:choice1
+:choice66
 set /P ytjs=Save to Txt? [Y/N]?
 if /I "%ytjs%" EQU "Y" goto :ytjsy
 if /I "%ytjs%" EQU "N" goto :ytjsn
-goto :choice1
+goto :choice66
 :ytjsy
 set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl -j %url% > JSONresults.txt
-goto choice2
+goto choice67
 :ytjsn
 set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 youtube-dl -j %url% 
-goto choice3
+goto choice68
 :: Open Saved TXT?
-:choice2
+:choice67
 set /P tyjo=Open TXT file? [Y/N]?
 if /I "%tyjo%" EQU "Y" goto :tyjoy
 if /I "%tyjo%" EQU "N" goto :tyjon
-goto pla9
+goto :choice67
 :tyjoy
 start JSONresults.txt
+goto pla9
 :tyjon
-goto choice3
+goto choice68
 :: Return Home?
-:choice3
+:choice68
 set /P ytfh2=Return Home? [Y/N]?
 if /I "%ytfh2%" EQU "Y" goto :ytfh2y
 if /I "%ytfh2%" EQU "N" goto :ytfh2n
-goto :choice3
+goto :choice68
 :ytfh2y
 goto pla9
 :ytfh2n
@@ -1912,11 +2187,11 @@ set "flag=%~1"
 if not defined flag set /p "flag=Enter Flags Here: "
 youtube-dl %flag%
 TIMEOUT 1
-:choice
+:choice64
 set /P ytfh3=Return Home? [Y/N]?
 if /I "%ytfh3%" EQU "Y" goto :ytfh3y
 if /I "%ytfh3%" EQU "N" goto :ytfh3n
-goto :choice
+goto :choice64
 :ytfh3y
 goto pla9
 :ytfh3n
@@ -1929,11 +2204,11 @@ set "url=%~1"
 if not defined url set /p "url=Enter URL: "
 [ENTER COMMAND HERE]
 TIMEOUT 1
-:choice
+:choice65
 set /P ytfh4=Return Home? [Y/N]?
 if /I "%ytfh4%" EQU "Y" goto :ytfh4y
 if /I "%ytfh4%" EQU "N" goto :ytfh4n
-goto :choice
+goto :choice65
 :ytfh4y
 goto pla9
 :ytfh4n
