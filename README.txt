@@ -11,6 +11,13 @@ This batch file uses youtube-dl and ffmpeg to do the downloading. A ton of peopl
 
 If a video download is not working, your best bet is to check: https://ytdl-org.github.io/youtube-dl/supportedsites.html and see if the site is supported.  One note, when sites change their code in relation to the video, it will sometimes break youtube-dl.  An example site as of typing this is Xhamster.  Its on the list as supported, but its currently not working because of a change on Xhamster's end.  You can always check the Issues tabs and see if someone made a report for it.  In this case they did, and the fix has already been found but has not been implemented: https://github.com/ytdl-org/youtube-dl/issues/26157
 
+====================
+Requirements to Run
+====================
+youtube-dl.exe requires Microsoft Visual C++ 2010 Redistributable Package (x86) and does not require Python that is already embedded into the binary.  You can find Microsoft Visual C++ 2010 Redistributable Package (x86) at:
+
+https://www.microsoft.com/en-US/download/details.aspx?id=5555
+
 ==========================
 Updating Youtube-DL
 ==========================
@@ -18,7 +25,7 @@ Keeping youtube-dl.exe up to date is important.  To update you can open CMD in B
 
 youtube-dl -U
 
-Alternatively, you can just run the Update_YTDL.bat and it will do the same thing.
+Alternatively, you can just run the Update_YTDL.bat
 
 ==========================
 Youtube Age Restriction

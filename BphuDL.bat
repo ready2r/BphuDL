@@ -1366,8 +1366,9 @@ echo  3)  TWITCHUSER3
 echo  4)  TWITCHUSER4
 echo  5)  TWITCHUSER5
 echo  6)  TWITCHUSER6
-echo  7)  Save a Stream While They are Live
-echo  8)  Play a Live Stream in CMD
+echo  7)  Save Portion of a VOD
+echo  8)  Save a Stream While They are Live
+echo  9)  Play a Live Stream in CMD
 echo  Q)  Main Menu
 echo  QQ) Quit
 echo -
@@ -1381,6 +1382,7 @@ if "%tlv%"=="5" goto tlv5
 if "%tlv%"=="6" goto tlv6
 if "%tlv%"=="7" goto tlv7
 if "%tlv%"=="8" goto tlv8
+if "%tlv%"=="9" goto tlv9
 if "%tlv%"=="Q" goto home1
 if "%tlv%"=="q" goto home1
 if "%tlv%"=="QQ" goto quit1
@@ -1561,8 +1563,41 @@ goto pla4
 :tc6n
 goto pla4
 
-::  Live Stream Save
+::Save Portion of VOD
 :tlv7
+cls
+echo =====================
+echo  Save Portion of VOD
+echo =====================
+set "url=%~1"
+if not defined url set /p "url=Enter URL of VOD: "
+youtube-dl -g %url%
+echo ===============================
+echo  Copy m3u8 playlist link above
+echo ===============================
+set "url1=%~1"
+set "strt=%~1"
+set "end=%~1"
+set "otpt=%~1"
+if not defined url1 set /p "url1=Paste m3u8 URL from Above: "
+if not defined strt set /p "strt=Enter Start Time [format: HH:MM:SS]: "
+if not defined end set /p "end=Enter How much to clip [format: HH:MM:SS]: "
+if not defined otpt set /p "otpt=Output File Name: "
+ffmpeg -ss %strt% -i "%url1%" -t %end% -c copy "Downloads\Twitch\%otpt%.mp4"
+TIMEOUT 1
+:choice69
+set /P tc10=Open Download Folder [Y/N]?
+if /I "%tc10%" EQU "Y" goto :tc10y
+if /I "%tc10%" EQU "N" goto :tc10n
+goto :choice69
+:tc10y
+start Downloads\Twitch\
+goto pla4
+:tc10n
+goto pla4
+
+::  Live Stream Save
+:tlv8
 cls
 echo ===============================================================================================================
 echo  Live Stream Save
@@ -1577,7 +1612,7 @@ ffmpeg -i "%url%" -vcodec copy -acodec copy Downloads\Twitch\LiveStreams\%name%.
 pause
 
 ::  Live Stream Play
-:tlv8
+:tlv9
 cls
 echo ===============================================================================================================
 echo  Live Stream Play
